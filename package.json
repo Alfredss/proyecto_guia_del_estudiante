@@ -1,0 +1,17 @@
+{
+  "name": "guia_experta_del_estudiante",
+  "version": "1.0.0",
+  "description": "el proyecto permite apoyar al estudiante a decidir y actuar durante todo el periodo academico en la universidad",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ingenieria de sistemas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "mongoose": "^4.6.5",
+    "vis": "^4.16.1"
+  }
+}
