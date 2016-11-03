@@ -2,10 +2,8 @@
 var express = require("express");
 var app = express();
 
-
 app.set("view engine", "jade");	//inicializamos el motor de vista
 app.use(express.static("public"));	//habilitamos la carpeta public para que almacene recursos
-
 
 
 
