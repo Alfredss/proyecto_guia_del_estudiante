@@ -28,10 +28,10 @@ app.get("/", function(req, res){
 	user.save(function(){
 		console.log("datos guardados correctamente");
 	});
-	*/
+	
 	Usuario.find(function(err, data){
 		console.log(data);
-	});
+	});*/
 	res.render("index");
 })//acceso a principal
 
