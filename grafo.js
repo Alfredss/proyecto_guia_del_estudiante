@@ -1,7 +1,7 @@
 
 var nodos = new vis.DataSet([
     //Curso Serie 100 Impar
-    {id:'a', label:'ass', level:0},
+   // {id:'a', label:'ass', level:0, hidden:true},
 
     {id:'cc121copia', label:'CC121', group:'100-impar', level:1, title:'aa'},
     {id:'cc121', label:'CC121', group:'100-impar', level:1, title:'Computación Básica'},
@@ -116,6 +116,8 @@ edges : aristas
 
 //Configuracion de algunos valores
 var opciones = {
+    height:'370px',
+    width:'918px',
     interaction:{
         hover:true,
     },
@@ -126,7 +128,7 @@ var opciones = {
             levelSeparation:95,
             //blockShifting: true,
             nodeSpacing: 40,
-            //treeSpacing: 10,                
+            treeSpacing: 0,                
         }
     },
     nodes: {            
