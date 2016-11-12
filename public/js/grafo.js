@@ -1,8 +1,6 @@
 
 var nodos = new vis.DataSet([
     //Curso Serie 100 Impar
-
-    {id:'s', label:'adsd', level:0},
     {id:'a', label:'ass', level:0},
 
     {id:'cc121copia', label:'CC121', group:'100-impar', level:1, title:'aa'},
@@ -154,19 +152,17 @@ var opciones = {
 var red = new vis.Network(contenedor, datos, opciones);
 red.setOptions(opciones);
 
-
 red.on("click", function (params) {
     params.event = "[original event]";
     valor = params.nodes[0];
+
     if(valor == 'ma143'){
-        alert('entramos');
         var btn = document.getElementById('btn');
         btn.click();
+
     }
-    document.getElementById('eventSpan').innerHTML = '<h2>doubleClick event:</h2>' + JSON.stringify(params, null, 4);
              
 });
-
 red.on("doubleClick", function (params) {
     params.event = "[original event]";
     //document.getElementById('eventSpan').innerHTML = '<h2>doubleClick event:</h2>' + JSON.stringify("hola", null, 4);;

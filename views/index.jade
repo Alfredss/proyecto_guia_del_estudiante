@@ -1,128 +1,121 @@
 doctype html
 html(lang='en')
   head
+    meta(http-equiv='Page-Enter', content='RevealTrans(Duration=4,Transition=2)')
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
     title Guia Del Experta del Estudiante
     // Estilos de Grafos
-    link(rel='stylesheet', href='librerias/dist/vis.css')
-    // Javascript Grafos
-    script(type='text/javascript', src='librerias/dist/vis.js')
-    // Esstiolos Bootstrap
-    link(rel='stylesheet', href='css/bootstrap.min.css')
-    // Tema opcional
-    link(rel='stylesheet', href='css/bootstrap-theme.min.css')
-    // Versión compilada y comprimida del JavaScript de Bootstrap
-    script(src='js/bootstrap.min.js')
-    // jquery
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
-    // Estilos Main
     link(rel='stylesheet', href='css/main.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='librerias/dist/vis.css')
+    script(type='text/javascript', src='librerias/dist/vis.js')
+    link(href='librerias/dist/vis-network.min.css', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
     // tipo de letra lobster
   body
-    // CABECERA
-    header.bg-info
-      .row
-        .col-xs-8.col-md-3
-          img.mediano(src='img/logo_unsch.png')
-        .cols-xs-1.col-md-6.text-center
-          h1 Guia Experta del Estudiante
-        .col-xs-8.col-md-3
-          img.mediano.derecha(src='img/logo_is.jpg')
-    // Navegacion
-    nav.navbar.navbar-inverse.text-center.navbar-static-top
-      .container
-        ul
-          li.col-md-4
-            a(href='/')
-              h4 Home
-          li.col-md-4
-            a(href='/estadisticas')
-              h4 Estadisticas
-          li.col-md-4
-            a(href='/blog')
-              h4 Blog
-    // Contenido
-    .row.bg-success.arriba
-      .col-md-2
-        #perfil.row
-          .col-md-1
-          .col-md-6.container.center-block
-            img.img-circle.mediano.img_center(src='img/perfil.jpg')
-          .col-md-4.dropdown
-            br
-            br
-            button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
-              span.glyphicon.glyphicon-cog(aria-hidden='true')
-            ul.dropdown-menu
-              li
-                a(href='#') HTML
-              li
-                a(href='#') CSS
-              li
-                a(href='#') JavaScript
-          .col-md-1
-        .row.text-center
-          | Caracteristicas del Curso
-      .col-md-10.text-justify.bg-info
-        ul.nav.nav-tabs
-          li.active(role='presentation')
-            a(href='#') Actual
-          li(role='presentation')
-            a(href='#') Avance
-        div
-          .row.text-center
-            .col-md-1
-              label(for='') 100-I
-            .col-md-1
-              label(for='') 100-II
-            .col-md-1
-              label(for='') 200-I
-            .col-md-1
-              label(for='') 200-II
-            .col-md-1
-              label(for='') 300-I
-            .col-md-1
-              label(for='') 300-II
-            .col-md-1
-              label(for='') 400-I
-            .col-md-1
-              label(for='') 400-II
-            .col-md-1
-              label(for='') 500-I
-            .col-md-1
-              label(for='') 500-II
-            .col-md-1
-              label(for='')
-            .col-md-1
-              label
-        #myRed
+    div
+      // CABECERA
+      header.bg-info
         .row
-          .col-md-3
-          .col-md-6.bg-info
-            .progress
-              .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
-                | 20% Complete
-          .col-md-3
-    // Navegador de Links
-    // Contenido Relacionado
-    // Pie de Pagina
-
-    .container
-      // Trigger the modal with a button
-      button#btn.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#myModal', style='background: transparent; border: none !important; font-size:0;') Open Small Modal
-      // Modal
-      #myModal.modal.fade(role='dialog')
-        .modal-dialog.modal-sm
-          .modal-content
-            .modal-header
-              button.close(type='button', data-dismiss='modal') ×
-              h4.modal-title Modal Header
-            .modal-body
-              p This is a small modal.
-            .modal-footer
-              button.btn.btn-default(type='button', data-dismiss='modal') Close
-
-    footer#eventSpan.bg-danger
-    // SCRIPT DE MALLA CURRICULAR ACTUAL
-    script(src='js/grafo.js')
-    
+          .col-xs-8.col-md-3
+            img.mediano(src='img/logo_unsch.png')
+          .cols-xs-1.col-md-6.text-center
+            h1 Guia Experta del Estudiante
+          .col-xs-8.col-md-3
+            img.mediano.derecha(src='img/logo_is.jpg')
+      // Navegacion
+      nav.navbar.navbar-inverse.text-center.navbar-static-top
+        .container
+          ul
+            li.col-md-4
+              a(href='/')
+                h4 Home
+            li.col-md-4
+              a(href='/estadisticas')
+                h4 Estadisticas
+            li.col-md-4
+              a(href='/blog')
+                h4 Blog
+          // Trigger the modal with a button
+      // Contenido
+      .row.bg-success
+        .col-md-2
+          #perfil.row
+            .col-md-1
+            .col-md-6.container.center-block
+              img.img-circle.mediano.img_center(src='img/perfil.jpg')
+            .col-md-4.dropdown
+              br
+              br
+              button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+                span.glyphicon.glyphicon-cog(aria-hidden='true')
+              ul.dropdown-menu
+                li
+                  a(href='#') HTML
+                li
+                  a(href='#') CSS
+                li
+                  a(href='#') JavaScript
+            .col-md-1
+          .row.text-center Caracteristicas del Curso
+        .col-md-10.text-justify.bg-info
+          ul.nav.nav-tabs
+            li.active(role='presentation')
+              a(href='#') Actual
+            li(role='presentation')
+              a(href='#') Avance
+          div
+            .row.text-center
+              .col-md-1
+                label(for='') 100-I
+              .col-md-1
+                label(for='') 100-II
+              .col-md-1
+                label(for='') 200-I
+              .col-md-1
+                label(for='') 200-II
+              .col-md-1
+                label(for='') 300-I
+              .col-md-1
+                label(for='') 300-II
+              .col-md-1
+                label(for='') 400-I
+              .col-md-1
+                label(for='') 400-II
+              .col-md-1
+                label(for='') 500-I
+              .col-md-1
+                label(for='') 500-II
+              .col-md-1
+                label(for='')
+              .col-md-1
+                label
+          #myRed
+          .row
+            .col-md-3
+            .col-md-6.bg-info
+              .progress
+                .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%') 20% Complete
+            .col-md-3
+      // Navegador de Links
+      // Contenido Relacionado
+      // Pie de Pagina
+    div
+      .container
+        button#btn.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#myModal', style='background: transparent; border: none !important; font-size:0;')
+        // Modal
+        #myModal.modal.fade(role='dialog')
+          .modal-dialog.modal-sm
+            .modal-content
+              .modal-header
+                button.close(type='button', data-dismiss='modal') ×
+                h4.modal-title Modal Header
+              .modal-body
+                p Cálculo I
+              .modal-footer
+                button.btn.btn-default(type='button', data-dismiss='modal') Close
+      footer#eventSpan.bg-danger
+      // SCRIPT DE MALLA CURRICULAR ACTUAL
+      script(type='text/javascript', src='js/grafo.js')
