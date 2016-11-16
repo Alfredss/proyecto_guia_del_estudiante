@@ -1,3 +1,15 @@
+var estado = "desaprobado"
+var color_border;
+var color_background;
+if(estado == "aprobado"){
+    color_background = '#81BEF7';
+    color_border = '#FF8000';
+}else{
+    color_border = '#000000';
+    color_background = '#A4A4A4';
+}
+
+
 
 var nodos = new vis.DataSet([
     //Curso Serie 100 Impar
@@ -14,21 +26,24 @@ var nodos = new vis.DataSet([
     {id:'md141', label:'MD141', group:'100-impar', level:1, title:'Método del Estudio Universitario'},
 
     //Curso Serie 100 Par
-    {id:'ma144', label:'MA144', group:'100-par', level:2, title:'Cálculo II'},
-    {id:'fs142', label:'FS142', group:'100-par', level:2, title:'Física I'},
+    
     {id:'ac121', label:'AC121', group:'100-par', level:2, title:'Folklore'},
     {id:'ma142', label:'MA142', group:'100-par', level:2, title:'Matemática Discreta'},
-    {id:'ad142', label:'AD142', group:'100-par', level:2, title:'Adminictración General'},
+    {id:'ad142', label:'AD142', group:'100-par', level:2, title:'Administración General'},
     {id:'is142', label:'IS142', group:'100-par', level:2, title:'Programación Orientada a Objetos'},
-    {id:'ec142', label:'EC142', group:'100-par', level:2, title:'Microeconomía'},
+    {color:{border:'#000000', background:'#A4A4A4'},id:'ec142', label:'EC142', group:'100-par', level:2, title:'Microeconomía'},
+    {id:'ma144', label:'MA144', group:'100-par', level:2, title:'Cálculo II'},
+    {id:'fs142', label:'FS142', group:'100-par', level:2, title:'Física I'},
 
     //Curso Serie 200 Impar
+    {id:'ec241', label:'EC241', group:'200-impar', level:3, title:'Macroeconomía'},
+    {id:'ec24', label:'EC2', level:3, title:'Macroeconomía', hidden:true},
     {id:'es241', label:'ES241', group:'200-impar', level:3, title:'Estadística I'},
-    {id:'ma243', label:'MA243', group:'200-impar', level:3, title:'Cálculo III'},
     {id:'fs241', label:'FS241', group:'200-impar', level:3, title:'Física II'},
+    {id:'ma243', label:'MA243', group:'200-impar', level:3, title:'Cálculo III'},
     {id:'ma241', label:'MA241', group:'200-impar', level:3, title:'Álgebra Lineal'},
     {id:'is241', label:'IS241', group:'200-impar', level:3, title:'Estructura de Datos'},
-    {id:'ec241', label:'EC241', group:'200-impar', level:3, title:'Macroeconomía'},
+    
     
     //Curso Serie 200 Par
     {id:'es244', label:'ES244', group:'200-par', level:4, title:'Estadística II'},
@@ -40,6 +55,7 @@ var nodos = new vis.DataSet([
     {id:'ac222', label:'AC222', group:'200-par', level:4, title:'Arte Musical y Teatral'},
         
     //Curso Serie 300 Impar
+    {id:'is34', label:'IS34', group:'300-impar', level:5, title:'Metodología de Sistemas Blandos'},
     {id:'is343', label:'IS343', group:'300-impar', level:5, title:'Metodología de Sistemas Blandos'},
     {id:'co341', label:'CO341', group:'300-impar', level:5, title:'Contabilidad General'},
     {id:'is341', label:'IS341', group:'300-impar', level:5, title:'Sistemas Digitales y Arquitectura de Computadoras'},
@@ -57,7 +73,8 @@ var nodos = new vis.DataSet([
     {id:'is362', label:'IS362', group:'300-par', level:6, title:'Sistemas de Información I'},
 
     //Curso Serie 400 Impar
-    {id:'in441', label:'IN441', group:'400-impar', level:7, title:''},
+    {id:'in44', label:'IN44', group:'400-impar', level:7, title:'Inglés I'},
+    {id:'in441', label:'IN441', group:'400-impar', level:7, title:'Inglés I'},
     {id:'ec441', label:'EC441', group:'400-impar', level:7, title:'Ingeniería Económica'},
     {id:'is441', label:'IS441', group:'400-impar', level:7, title:'Redes de Computadoras'},
     {id:'ad441', label:'AD441', group:'400-impar', level:7, title:'Logística'},
@@ -68,7 +85,7 @@ var nodos = new vis.DataSet([
     {id:'is453', label:'IS453', group:'400-impar', level:7, title:'Creatividad Empresarial'},
     
     //Curso Serie 400 Par
-    {id:'in442', label:'IN442', group:'400-par', level:8, title:''},
+    {id:'in442', label:'IN442', group:'400-par', level:8, title:'Inglés II'},
     {id:'ad442', label:'AD442', group:'400-par', level:8, title:'Gestión Financiera'},
     {id:'is444', label:'IS444', group:'400-par', level:8, title:'Seguridad Informática'},    
     {id:'is454', label:'IS454', group:'400-par', level:8, title:'Desarrollo Web'},
@@ -79,7 +96,7 @@ var nodos = new vis.DataSet([
     {id:'is452', label:'IS452', group:'400-par', level:8, title:'Calidad Total'},
         
     //Curso Serie 500 Impar
-    {id:'in541', label:'IN541', group:'500-impar', level:9, title:''},
+    {id:'in541', label:'IN541', group:'500-impar', level:9, title:'Inglés III'},
     {id:'ad541', label:'AD541', group:'500-impar', level:9, title:'Proyectos de Inversión'},
     {id:'is545', label:'IS545', group:'500-impar', level:9, title:'Comercio Electrónico'},
     {id:'is551', label:'IS551', group:'500-impar', level:9, title:'Reingeniería de Procesos'},
@@ -90,7 +107,7 @@ var nodos = new vis.DataSet([
     {id:'ad551', label:'AD551', group:'500-impar', level:9, title:'Mercadotecnia'},
 
     //Curso Serie 500 Par
-    {id:'in542', label:'IN542', group:'500-par', level:10, title:''},
+    {id:'in542', label:'IN542', group:'500-par', level:10, title:'Inglés IV'},
     {id:'is548', label:'IS548', group:'500-par', level:10, title:'Planeamiento Estratégico de Negocios'},
     {id:'is546', label:'IS546', group:'500-par', level:10, title:'Prácticas Pre-Profesionales'},
     {id:'de542', label:'DE542', group:'500-par', level:10, title:'Legislación'},
@@ -116,8 +133,8 @@ edges : aristas
 
 //Configuracion de algunos valores
 var opciones = {
-    height:'370px',
-    width:'918px',
+    height:'400px',
+    width:'840px',
     interaction:{
         hover:true,
     },
@@ -125,7 +142,7 @@ var opciones = {
         hierarchical:{
             enabled:true,
             direction:'LR',
-            levelSeparation:95,
+            levelSeparation:87,
             //blockShifting: true,
             nodeSpacing: 40,
             treeSpacing: 0,                
@@ -137,7 +154,7 @@ var opciones = {
             y: false,
         },
         font: {
-            size: 10
+            size: 12        
         },
         shape: 'box',
         shapeProperties: {
@@ -159,11 +176,389 @@ red.on("click", function (params) {
     valor = params.nodes[0];
 
     if(valor == 'ma143'){
-        var btn = document.getElementById('btn');
+        var btn = document.getElementById('btnMa143');
         btn.click();
-
     }
-             
+
+    if(valor == 'ma141'){
+        var btn = document.getElementById('btnMa141');
+        btn.click();
+    }
+
+    if(valor == 'le141'){
+        var btn = document.getElementById('btnLe141');
+        btn.click();
+    }
+
+    if(valor == 'is141'){
+        var btn = document.getElementById('btnIs141');
+        btn.click();
+    }
+
+    if(valor == 'ec141'){
+        var btn = document.getElementById('btnEc141');
+        btn.click();
+    }
+
+    if(valor == 'md141'){
+        var btn = document.getElementById('btnMd141');
+        btn.click();
+    }
+
+    if(valor == 'ef122'){
+        var btn = document.getElementById('btnEf122');
+        btn.click();
+    }
+
+    if(valor == 'cc121'){
+        var btn = document.getElementById('btnCc121');
+        btn.click();
+    }
+
+    if(valor == 'ac121'){
+        var btn = document.getElementById('btnAc121');
+        btn.click();
+    }
+    
+    if(valor == 'ma142'){
+        var btn = document.getElementById('btnMa142');
+        btn.click();
+    }
+    
+    if(valor == 'ad142'){
+        var btn = document.getElementById('btnAd142');
+        btn.click();
+    }
+
+    if(valor == 'is142'){
+        var btn = document.getElementById('btnIs142');
+        btn.click();
+    }
+
+    if(valor == 'ec142'){
+        var btn = document.getElementById('btnEc142');
+        btn.click();
+    }
+
+    if(valor == 'ma144'){
+        var btn = document.getElementById('btnMa144');
+        btn.click();
+    }
+
+    if(valor == 'fs142'){
+        var btn = document.getElementById('btnFs142');
+        btn.click();
+    }
+
+    if(valor == 'ec241'){
+        var btn = document.getElementById('btnEc241');
+        btn.click();
+    }
+
+    if(valor == 'es241'){
+        var btn = document.getElementById('btnEs241');
+        btn.click();
+    }
+
+    if(valor == 'fs241'){
+        var btn = document.getElementById('btnFs241');
+        btn.click();
+    }
+
+    if(valor == 'ma243'){
+        var btn = document.getElementById('btnMa243');
+        btn.click();
+    }
+
+    if(valor == 'ma241'){
+        var btn = document.getElementById('btnMa241');
+        btn.click();
+    }
+
+    if(valor == 'is241'){
+        var btn = document.getElementById('btnIs241');
+        btn.click();
+    }    
+    
+    if(valor == 'es244'){
+        var btn = document.getElementById('btnEs244');
+        btn.click();
+    }
+
+    if(valor == 'is242'){
+        var btn = document.getElementById('btnIs242');
+        btn.click();
+    } 
+
+    if(valor == 'is244'){
+        var btn = document.getElementById('btnIs244');
+        btn.click();
+    }
+
+    if(valor == 'is262'){
+        var btn = document.getElementById('btnIs262');
+        btn.click();
+    } 
+
+    if(valor == 'is248'){
+        var btn = document.getElementById('btnIs248');
+        btn.click();
+    }
+
+    if(valor == 'is246'){
+        var btn = document.getElementById('btnIs246');
+        btn.click();
+    }
+
+    if(valor == 'ac222'){
+        var btn = document.getElementById('btnAc222');
+        btn.click();
+    }
+    
+    if(valor == 'is343'){
+        var btn = document.getElementById('btnIs343');
+        btn.click();
+    }
+
+    if(valor == 'co341'){
+        var btn = document.getElementById('btnCo341');
+        btn.click();
+    }
+
+    if(valor == 'is341'){
+        var btn = document.getElementById('btnIs341');
+        btn.click();
+    }
+
+    if(valor == 'is347'){
+        var btn = document.getElementById('btnIs347');
+        btn.click();
+    }
+
+    if(valor == 'is345'){
+        var btn = document.getElementById('btnIs345');
+        btn.click();
+    }
+
+    if(valor == 'cs321'){
+        var btn = document.getElementById('btnCs321');
+        btn.click();
+    }
+
+    if(valor == 'cs341'){
+        var btn = document.getElementById('btnCs341');
+        btn.click();
+    }
+
+    if(valor == 'is346'){
+        var btn = document.getElementById('btnIs346');
+        btn.click();
+    }
+
+    if(valor == 'co342'){
+        var btn = document.getElementById('btnCo342');
+        btn.click();
+    }
+
+    if(valor == 'is344'){
+        var btn = document.getElementById('btnIs344');
+        btn.click();
+    }
+
+    if(valor == 'is342'){
+        var btn = document.getElementById('btnIs342');
+        btn.click();
+    }
+
+    if(valor == 'is348'){
+        var btn = document.getElementById('btnIs348');
+        btn.click();
+    }
+
+    if(valor == 'is362'){
+        var btn = document.getElementById('btnIs362');
+        btn.click();
+    }
+
+    if(valor == 'in441'){
+        var btn = document.getElementById('btnIn441');
+        btn.click();
+    }
+
+    if(valor == 'ec441'){
+        var btn = document.getElementById('btnEc441');
+        btn.click();
+    }
+    
+    if(valor == 'is441'){
+        var btn = document.getElementById('btnIs441');
+        btn.click();
+    }
+
+    if(valor == 'ad441'){
+        var btn = document.getElementById('btnAd441');
+        btn.click();
+    }
+    //Curso Serie 400 Impar
+    if(valor == 'is443'){
+        var btn = document.getElementById('btnIs443');
+        btn.click();
+    }
+
+    if(valor == 'is445'){
+        var btn = document.getElementById('btnIs445');
+        btn.click();
+    }
+    if(valor == 'is451'){
+        var btn = document.getElementById('btnIs451');
+        btn.click();
+    }
+    
+    if(valor == 'ad451'){
+        var btn = document.getElementById('btnAd451');
+        btn.click();
+    }
+
+    if(valor == 'is453'){
+        var btn = document.getElementById('btnIs453');
+        btn.click();
+    }
+
+    if(valor == 'in442'){
+        var btn = document.getElementById('btnIn442');
+        btn.click();
+    }
+
+    if(valor == 'ad442'){
+        var btn = document.getElementById('btnAd442');
+        btn.click();
+    }
+    
+    if(valor == 'is444'){
+        var btn = document.getElementById('btnIs444');
+        btn.click();
+    }
+
+    if(valor == 'is454'){
+        var btn = document.getElementById('btnIs454');
+        btn.click();
+    }
+
+    if(valor == 'is442'){
+        var btn = document.getElementById('btnIs442');
+        btn.click();
+    }
+
+    if(valor == 'ad444'){
+        var btn = document.getElementById('btnAd444');
+        btn.click();
+    }
+
+    if(valor == 'is446'){
+        var btn = document.getElementById('btnIs446');
+        btn.click();
+    }
+
+    if(valor == 'ad452'){
+        var btn = document.getElementById('btnAd452');
+        btn.click();
+    }
+
+    if(valor == 'is452'){
+        var btn = document.getElementById('btnIs452');
+        btn.click();
+    }
+
+    if(valor == 'in541'){
+        var btn = document.getElementById('btnIn541');
+        btn.click();
+    }
+
+    if(valor == 'ad541'){
+        var btn = document.getElementById('btnAd541');
+        btn.click();
+    }
+    
+    if(valor == 'is545'){
+        var btn = document.getElementById('btnIs545');
+        btn.click();
+    }
+
+    if(valor == 'is551'){
+        var btn = document.getElementById('btnIs551');
+        btn.click();
+    }
+
+    if(valor == 'is541'){
+        var btn = document.getElementById('btnIs541');
+        btn.click();
+    }
+
+    if(valor == 'is543'){
+        var btn = document.getElementById('btnIs543');
+        btn.click();
+    }
+
+    if(valor == 'is547'){
+        var btn = document.getElementById('btnIs547');
+        btn.click();
+    }
+
+    if(valor == 'is553'){
+        var btn = document.getElementById('btnIs553');
+        btn.click();
+    }
+
+    if(valor == 'ad551'){
+        var btn = document.getElementById('btnAd551');
+        btn.click();
+    }
+
+    if(valor == 'in542'){
+        var btn = document.getElementById('btnIn542');
+        btn.click();
+    }
+
+    if(valor == 'is548'){
+        var btn = document.getElementById('btnIs548');
+        btn.click();
+    }
+
+    if(valor == 'is546'){
+        var btn = document.getElementById('btnIs546');
+        btn.click();
+    }
+
+    if(valor == 'de542'){
+        var btn = document.getElementById('btnDe542');
+        btn.click();
+    }
+
+    if(valor == 'ad552'){
+        var btn = document.getElementById('btnAd552');
+        btn.click();
+    }
+
+    if(valor == 'is542'){
+        var btn = document.getElementById('btnIs542');
+        btn.click();
+    }
+
+    if(valor == 'is544'){
+        var btn = document.getElementById('btnIs544');
+        btn.click();
+    }
+
+    if(valor == 'is554'){
+        var btn = document.getElementById('btnIs554');
+        btn.click();
+    }
+
+    if(valor == 'is552'){
+        var btn = document.getElementById('btnIs552');
+        btn.click();
+    }
+
 });
 red.on("doubleClick", function (params) {
     params.event = "[original event]";

@@ -1,6 +1,6 @@
 .pequenio{
-	width: 50px;
-	height: 50px;
+	width: 80px;
+	height: 80px;
 }
 .mediano{
 	width: 100px;
@@ -21,6 +21,9 @@
 }
 .arriba{
     margin-top: 0px;
+}
+body{
+    padding-right: 0px;
 }
 h1 {
 	font-family: Lobster;
@@ -75,14 +78,124 @@ footer {
 
 	
 }
+.bordes{
+    border: 5px solid lightgray;
+    border-bottom: 0px;
+}
 
+.bordes-top{
+    border-top: 5px solid lightgray;
+}
+
+.bordes-right{
+    border-right: 5px solid lightgray;
+}
+
+.bordes_todo{
+    border: 5px solid lightgray;
+}
 #myRed {
 
-    width: 960px;
-    height: 400px;
+    width: 873px;
+    height: 410px;
     border: 5px solid lightgray;
     
     position: relative;    
     overflow-y: hidden;
     top: 0px;
+}
+
+#cuerpo{
+    position: relative;    
+    overflow-y: hidden;
+    top: 0px;
+}
+
+#div_leyenda{
+    width: 170px;
+    height: 409px;
+    position: relative;    
+    overflow-y: hidden;
+}
+#div_configuracion{
+    height: 314px;
+    position: relative;    
+    overflow-y: hidden;
+}
+#div_titulo_configuracion{
+    width: 200px;
+    height: 38px;
+    position: relative;    
+    overflow-y: hidden;
+}
+
+.div_cursos{
+
+    height: 0px;
+    position: relative;    
+    overflow-y: hidden;
+    top: -20px
+}
+
+.letra_Patua_One{
+    font-family: 'Courgette', cursive;
+}
+.base_cabecera{
+    background-color:#FFFBE0;
+}
+.base_navegacion{
+    background-color: #1A1A1B;
+}
+.base_perfil{
+    background-color: #2E94B9;
+}
+.base_leyenda{
+    background-color: #2E94B9;
+}
+.base_cuerpo{
+    background-color: #F9FCFD;
+}
+.base_pie{
+    background-color: #3A7563;
+}
+.base_progreso{
+    background-color: #259073;
+}
+
+.base_malla{
+    background-color: #122D42;
+}
+
+.base_serie{
+    background-color: #2E94B9
+;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+.letra_mediano{
+    font-size: 17px;
+}
+
+.abajo{
+    padding-top: 16px;
+}
+
+.letra_serie{
+    color:#000000;
+    padding-top: 5px;
 }

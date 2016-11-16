@@ -7,15 +7,16 @@ mongoose.connect("mongodb://localhost/guia_estudiante_db"); //conexion con mongo
 var estudianteJSON = {
 	codigo_estudiante: Number,
 	dni_estudiante: Number,
-	apellidos_estudiante:String,
+	apellidos_estudiante: String,
 	nombres_estudiante: String,
 	facultad_estudiante: String,
-	escuela_estudiante: String
+	escuela_estudiante: String,
+	serie_estudiante: String,
 }; //estructura del esquema
 
 var schema_estudiante = Schema(estudianteJSON); //esquema de estudiante
 
 var Estudiante = mongoose.model("Estudiante", schema_estudiante); //modelo Estudiante
 
-module.exports = Estudiante; //export
+module.exports.Estudiante = Estudiante; //export
 

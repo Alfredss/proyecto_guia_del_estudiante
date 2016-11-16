@@ -14,8 +14,9 @@ var cursoJSON = {
 	requisito: String,
 	departamento: String,
 	estado: String, 	// aprobado / desaprobado
-	tipo_curso: String  // curso llave
-	serie: String
+	tipo_curso: String,  // curso llave
+	serie: String,
+	siglo:Number,
 
 	descripcion: String,
 	objetivos: String,
@@ -33,7 +34,7 @@ var schema_curso = Schema(cursoJSON); //esquema de curso
 
 var Curso = mongoose.model("Curso", schema_curso); //modelo de curso
 
-module.exports = Curso;
+module.exports.Curso = Curso;
 
 
 

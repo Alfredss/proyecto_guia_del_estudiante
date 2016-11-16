@@ -53,11 +53,11 @@ html(lang='en')
                 span.glyphicon.glyphicon-cog(aria-hidden='true')
               ul.dropdown-menu
                 li
-                  a(href='#') HTML
+                  a(href='/configuracion') Configuracion
                 li
-                  a(href='#') CSS
+                  a(href='#') Ayuda
                 li
-                  a(href='#') JavaScript
+                  a(href='#') salir
             .col-md-1
           .row.text-center Caracteristicas del Curso
         .col-md-10.text-justify.bg-info
@@ -117,5 +117,8 @@ html(lang='en')
               .modal-footer
                 button.btn.btn-default(type='button', data-dismiss='modal') Close
       footer#eventSpan.bg-danger
+        h1#estado!= hola
+        
       // SCRIPT DE MALLA CURRICULAR ACTUAL
-      script(type='text/javascript', src='js/grafo.js')
+      script(type='text/javascript', src='js/grafo.js').
+        

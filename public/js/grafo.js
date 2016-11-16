@@ -1,3 +1,22 @@
+/*
+function state(){
+    s = require("app.js").state;
+    alert(s);
+}*/
+
+//state();
+
+
+var estado = document.getElementById("estado").innerText;
+
+if(estado == "aprobado"){
+    color_background = '';
+    color_border = '';
+}else{
+    color_border = '#000000';
+    color_background = '#A4A4A4';
+}
+
 
 var nodos = new vis.DataSet([
     //Curso Serie 100 Impar
@@ -19,7 +38,7 @@ var nodos = new vis.DataSet([
     {id:'ma142', label:'MA142', group:'100-par', level:2, title:'Matemática Discreta'},
     {id:'ad142', label:'AD142', group:'100-par', level:2, title:'Adminictración General'},
     {id:'is142', label:'IS142', group:'100-par', level:2, title:'Programación Orientada a Objetos'},
-    {id:'ec142', label:'EC142', group:'100-par', level:2, title:'Microeconomía'},
+    {id:'ec142', label:'EC142', group:'100-par', level:2, title:'Microeconomía',color:{border:color_border, background:color_background}},
 
     //Curso Serie 200 Impar
     {id:'es241', label:'ES241', group:'200-impar', level:3, title:'Estadística I'},
@@ -159,7 +178,11 @@ red.on("click", function (params) {
     if(valor == 'ma143'){
         var btn = document.getElementById('btn');
         btn.click();
+        
+    }
 
+    if(valor == 'ma141'){ 
+        alert(s);
     }
              
 });
@@ -167,3 +190,4 @@ red.on("doubleClick", function (params) {
     params.event = "[original event]";
     //document.getElementById('eventSpan').innerHTML = '<h2>doubleClick event:</h2>' + JSON.stringify("hola", null, 4);;
 });
+

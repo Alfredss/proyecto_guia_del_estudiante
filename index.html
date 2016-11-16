@@ -13,147 +13,1700 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- tipo de letra lobster-->
-  </head>
+    <!-- tipo de letra patua-->
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 
+    <style type="text/css" rel="stylesheet"> 
+
+      a:link {text-decoration:none;color:#0000cc;} 
+
+      a:visited {text-decoration:none;color:#ffcc33;} 
+
+      a:active {text-decoration:none;color:#ff0000;} 
+
+      a:hover {text-decoration:underline;color:#999999;} 
+
+    </style> 
+  </head>
 
 
   <body>
     <div>
     <!-- CABECERA-->
-    <header class="bg-info">
+    <header class="base_cabecera">
       <div class="row">
-        <div class="col-xs-8 col-md-3"><img src="img/logo_unsch.png" class="mediano"></div>
+        <div class="col-xs-8 col-md-3"><a href="http://www.unsch.edu.pe/" target="_self "><img src="img/logo_unsch.png" class="mediano"></a></div>
         <div class="cols-xs-1 col-md-6 text-center">
-          <h1>Guia Experta del Estudiante</h1>
+          <h1 class="letra_Patua_One">Guia Experta del Estudiante</h1>
         </div>
-        <div class="col-xs-8 col-md-3"><img src="img/logo_is.jpg" class="mediano derecha"></div>
+        <div class="col-xs-8 col-md-3"><a href="https://www.facebook.com/groups/1425237611081130/?fref=ts" target="_self "><img src="img/logo_is.jpg" class="mediano derecha"></a></div>
       </div>
     </header>
     <!-- Navegacion-->
-    <nav class="navbar navbar-inverse text-center navbar-static-top">
+    
+    <nav class="base_navegacion text-center" >
       <div class="container">
-        <ul>
-          <li class="col-md-4"><a href="/">
-              <h4>Home</h4></a></li>
-          <li class="col-md-4"><a href="/estadisticas">
-              <h4>Estadisticas</h4></a></li>
-          <li class="col-md-4"><a href="/blog">
-              <h4>Blog</h4></a></li>
+        <ul style="list-style:none" class=""">
+          <li class="col-md-4"><a href="/" style="text-decoration: none; color:#FFFFFF;">
+              <h4 class="letra_mediano"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Home</h4></a></li>
+          <li class="col-md-4"><a href="/estadisticas" style="text-decoration: none; color:#FFFFFF;">
+              <h4 class="letra_mediano"><span class="glyphicon glyphicon-signal" aria-hidden="true"></span>&nbsp;Estadisticas</h4></a></li>
+          <li class="col-md-4"><a href="/blog" style="text-decoration: none; color:#FFFFFF;">
+              <h4 class="letra_mediano"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;Blog</h4></a></li>
         </ul>
-          <!-- Trigger the modal with a button -->
+          <!--Trigger the modal with a button -->
       </div>
-    </nav>
+    </nav> 
+
     <!-- Contenido-->
-    <div class="row bg-success">
-      <div class="col-md-2">
-        <div id="perfil" class="row">
+    <div class="row" id="cuerpo">
+      <div class="col-md-2 base_perfil">
+        <div id ="div_titulo_configuracion" class="base_serie text-center bordes_todo" style="padding-top:1px">
+           <label for="" class="letra_serie">USUARIO</label>
+        </div>
+        <div id="perfil" class="row" >
           <div class="col-md-1"></div>
-          <div class="col-md-6 container center-block"><img src="img/perfil.jpg" class="img-circle mediano img_center"></div>
-          <div class="col-md-4 dropdown"><br><br>
+          <div class="col-md-5 container center-block"><p></p><img src="img/perfil.jpg" class="img-circle pequenio img_center"></div>
+          <div class="col-md-3 dropdown"><br><br>
             <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span aria-hidden="true" class="glyphicon glyphicon-cog"></span></button>
             <ul class="dropdown-menu">
-              <li><a href="#">HTML</a></li>
-              <li><a href="#">CSS</a></li>
-              <li><a href="#">JavaScript</a></li>
+              <li><a href="#">Tu Nombre</a></li>
+              <li><a href="#">Configuracion</a></li>
+              <li><a href="#">Salir</a></li>
             </ul>
           </div>
           <div class="col-md-1"></div>
         </div>
-        <div class="row text-center">Caracteristicas del Curso</div>
-      </div>
-      <div class="col-md-10 text-justify bg-info">
-        <ul class="nav nav-tabs">
-          <li role="presentation" class="active"><a href="#">Actual</a></li>
-          <li role="presentation"><a href="#">Avance</a></li>
-        </ul>
-        <div>
-          <div class="row text-center">
-            <div class="col-md-1">
-              <label for="">100-I</label>
-            </div>
-            <div class="col-md-1">
-              <label for="">100-II</label>
-            </div>
-            <div class="col-md-1">
-              <label for="">200-I</label>
-            </div>
-            <div class="col-md-1">
-              <label for="">200-II</label>
-            </div>
-            <div class="col-md-1">
-              <label for="">300-I</label>
-            </div>
-            <div class="col-md-1">
-              <label for="">300-II</label>
-            </div>
-            <div class="col-md-1">
-              <label for="">400-I</label>
-            </div>
-            <div class="col-md-1">
-              <label for="">400-II</label>
-            </div>
-            <div class="col-md-1">
-              <label for="">500-I</label>
-            </div>
-            <div class="col-md-1">
-              <label for="">500-II</label>
-            </div>
-            <div class="col-md-1">
-              <label for=""></label>
-            </div>
-            <div class="col-md-1">
-              <label></label>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          
-          <div id="myRed" class="col-md-10"></div>
+        <div class="row text-center">
           <div class="col-md-1"></div>
-        </div>
-          
-          
-        
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6 bg-info">
-            <div class="progress">
-              <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%" class="progress-bar progress-bar-info">20% Complete</div>
-            </div>
+          <div id="div_configuracion" class="col-md-10" style="padding-left: 2px;">
+            <strong>Caracteristicas del Curso</strong>
+            
+     
           </div>
-          <div class="col-md-3"></div>
+          <div class="col-md-1"></div>
+          
+          
+        </div>
+      </div>
+
+      <!--CUERPO-->
+      <div class="col-md-10 text-justify base_cuerpo">
+        <div class="row text-center">
+          <div class="col-md-1 bordes base_serie">
+            <label for="" class="letra_serie">100-I</label>
+          </div>
+          <div class="col-md-1 bordes-top base_serie">
+            <label for="" class="letra_serie">100-II</label>
+          </div>
+          <div class="col-md-1 bordes base_serie">
+            <label for="" class="letra_serie">200-I</label>
+          </div>
+          <div class="col-md-1 bordes-top base_serie">
+            <label for="" class="letra_serie">200-II</label>
+          </div>
+          <div class="col-md-1 bordes base_serie">
+            <label for="" class="letra_serie">300-I</label>
+          </div>
+          <div class="col-md-1 bordes-top base_serie">
+            <label for="" class="letra_serie">300-II</label>
+          </div>
+          <div class="col-md-1 bordes base_serie">
+            <label for="" class="letra_serie">400-I</label>
+          </div>
+          <div class="col-md-1 bordes-top base_serie">
+            <label for="" class="letra_serie">400-II</label>
+          </div>
+          <div class="col-md-1 bordes base_serie">
+            <label for="" class="letra_serie">500-I</label>
+          </div>
+          <div class="col-md-1 bordes-top bordes-right base_serie">
+            <label for="" class="letra_serie">500-II</label>
+          </div>
+          <div class="col-md-2 base_serie bordes-top">
+            <label for="" class="letra_serie">LEYENDA</label>
+          </div>
+        </div>
+       
+        <div class="row">
+          <div id="myRed" class="col-md-10 base_malla"></div>
+          <div class="col-md-2 base_leyenda bordes-top" id="div_leyenda">
+            sjvnjdvnjd
+          </div>
         </div>
       </div>
     </div>
-    <!-- Navegador de Links-->
-    <!-- Contenido Relacionado-->
-    <!-- Pie de Pagina-->
 
     </div>
     <div>
- <div class="container">
-    <button id = "btn" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style = "background: transparent; border: none !important; font-size:0;"></button>
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
-          </div>
-          <div class="modal-body">
-            <p>Cálculo I</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <!--MENSAJE INFORMATIVO-->
+    <div class="div_cursos">
+      <!--100 I-->
+      <!--MA143-->
+      <button id = "btnMa143" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ma143" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ma143" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Calculo I</h4>
+            </div>
+            <div class="modal-body">
+              <p>Cálculo I</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-    <footer id="eventSpan" class="bg-danger"></footer>
+
+      <!--IS141-->
+      <button id = "btnIs141" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is141" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is141" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Algoritmos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--LE141-->
+      <button id = "btnLe141" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#le141" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="le141" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Comunicación Oral y Escrita</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--EC141-->
+      <button id = "btnEc141" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ec141" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ec141" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Economía</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--MA141-->
+      <button id = "btnMa141" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ma141" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ma141" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Matemática Básica</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--MD141-->
+      <button id = "btnMd141" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#md141" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="md141" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Método del Estudio Universitario</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--CC121-->
+      <button id = "btnCc121" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#cc141" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="cc141" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Computación Básica</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--EF122-->
+      <button id = "btnEf122" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ef122" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ef122" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Deportes Menores</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--100 II-->  
+      <!--AC121-->
+      <button id = "btnAc121" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ac121" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ac121" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Folklore</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--MA142-->
+      <button id = "btnMa142" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ma142" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ma142" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Matemática Discreta</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--AD142-->
+      <button id = "btnAd142" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ad142" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ad142" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Administración General</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS142-->
+      <button id = "btnIs142" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is142" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is142" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Programación Orientada a Objetos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--EC142-->
+      <button id = "btnEc142" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ec142" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ec142" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Microeconomía</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--FS142-->
+      <button id = "btnFs142" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#fs142" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="fs142" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Física I</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--MA144-->
+      <button id = "btnMa144" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ma144" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ma144" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Cálculo II</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--200 I-->
+
+      <!--FS241-->
+      <button id = "btnFs241" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#fs241" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="fs241" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Física II</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--MA241-->
+      <button id = "btnMa241" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ma241" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ma241" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Álgebra Lineal</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS241-->
+      <button id = "btnIs241" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is241" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is241" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Estructura de Datos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--EC241-->
+      <button id = "btnEc241" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ec241" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ec241" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Macroeconomía</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--ES241-->
+      <button id = "btnEs241" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#es241" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="es241" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Estadística I</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--MA243-->
+      <button id = "btnMa243" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ma243" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ma243" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Cálculo III</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--200 II-->
+      <!--IS244-->
+      <button id = "btnIs244" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is244" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is244" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sistemas Eléctricos y Electrónicos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS262-->
+      <button id = "btnIs262" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is262" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is262" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Investigación de Operaciones</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS248-->
+      <button id = "btnIs248" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is248" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is248" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Organización y Métodos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS246-->
+      <button id = "btnIs246" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is246" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is246" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Teoría General de Sistemas</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--AC222-->
+      <button id = "btnAc222" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ac222" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ac222" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Arte Musical y Teatral</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS242-->
+      <button id = "btnIs242" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is242" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is242" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Métodos Numéricos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--300 I-->
+      <!--IS343-->
+      <button id = "btnIs343" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is343" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is343" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Metodología de Sistemas Blandos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS341-->
+      <button id = "btnIs341" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is341" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is341" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sistemas Digitales y Arquitectura de Computadoras</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS347-->
+      <button id = "btnIs347" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is347" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is347" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Investigación de Operaciones II</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS345-->
+      <button id = "btnIs345" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is345" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is345" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Planeamiento de Sistemas de Información</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--CS321-->
+      <button id = "btnCs321" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#cs321" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="cs321" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Realidad Nacional</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--CS341-->
+      <button id = "btnCs341" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#cs341" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="cs341" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Liderazgo</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--CO341-->
+      <button id = "btnCo341" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#co341" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="co341" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Contabilidad General</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--300 II--> 
+      <!--IS344-->
+      <button id = "btnIs344" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is344" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is344" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sistemas Operativos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS342-->
+      <button id = "btnIs342" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is342" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is342" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Teoría de Decisiones</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS348-->
+      <button id = "btnIs348" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is348" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is348" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modelamiento de Datos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS346-->
+      <button id = "btnIs346" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is346" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is346" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sistemas Dinámicos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS362-->
+      <button id = "btnIs362" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is362" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is362" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sistemas de Información I</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--CO342-->
+      <button id = "btnCo342" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#co342" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="co342" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sistema de Costos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--400 I-->
+      <!--IN441-->
+      <button id = "btnIn441" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#in441" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="in441" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Inglés I</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS441-->
+      <button id = "btnIs441" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is441" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is441" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Redes de Computadoras</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--AD441-->
+      <button id = "btnAd441" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ad441" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ad441" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Logística</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS443-->
+      <button id = "btnIs443" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is443" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is443" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Administración de Base de Datos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS445-->
+      <button id = "btnIs445" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is445" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is445" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sistemas de Información II</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS451-->
+      <button id = "btnIs451" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is451" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is451" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Ingeniería de la Información</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--EC441-->
+      <button id = "btnEc441" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ec441" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ec441" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Ingeniería Económica</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--AD451-->
+      <button id = "btnAd451" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ad451" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ad451" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Ingeniería de Software</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS453-->
+      <button id = "btnIs453" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is453" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is453" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Creatividad Empresarial</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--400 II-->
+      <!--IN442-->
+      <button id = "btnIn442" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#in442" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="in442" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Inglés II</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS444-->
+      <button id = "btnIs444" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is444" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is444" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Seguridad Informática</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS454-->
+      <button id = "btnIs454" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is454" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is454" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Desarrollo Web</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS442-->
+      <button id = "btnIs442" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is442" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is442" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sistemas Expertos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--AD444-->
+      <button id = "btnAd444" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ad444" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ad444" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Gestión de Recursos Humanos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS446-->
+      <button id = "btnIs446" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is446" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is446" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sistemas de Información Gerencial</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--AD452-->
+      <button id = "btnAd452" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ad452" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ad452" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Seminario de Empresas</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS452-->
+      <button id = "btnIs452" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is452" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is452" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Calidad Total</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--AD442-->
+      <button id = "btnAd442" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ad442" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ad442" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Gestión Financiera</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--500 I-->
+      <!--IS545-->
+      <button id = "btnIs545" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is545" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is545" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Comercio Electrónico</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS551-->
+      <button id = "btnIs551" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is551" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is551" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Reingeniería de Procesos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS541-->
+      <button id = "btnIs541" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is541" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is541" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Control y Automatización de Procesos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS543-->
+      <button id = "btnIs543" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is543" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is543" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Seminario de Tesis I</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS547-->
+      <button id = "btnIs547" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is547" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is547" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Auditoría de Sistemas</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS553-->
+      <button id = "btnIs553" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is553" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is553" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sistemas Distribuidos</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--AD551-->
+      <button id = "btnAd551" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ad551" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ad551" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Mercadotecnia</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IN541-->
+      <button id = "btnIn541" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#in541" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="in541" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Inglés III</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--AD541-->
+      <button id = "btnAd541" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ad541" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ad541" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Proyectos de Inversión</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--500 II--> 
+      <!--IS546-->
+      <button id = "btnIs546" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is546" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is546" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Prácticas Pre-Profesionales</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--DE542-->
+      <button id = "btnDe542" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#de542" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="de542" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Legislación</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--AD552-->
+      <button id = "btnAd552" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ad552" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="ad552" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Gestión de Empresas</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS542-->
+      <button id = "btnIs542" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is542" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is542" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Seminario de Tesis II</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS544-->
+      <button id = "btnIs544" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is544" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is544" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Taller de Ingeniería de Sistemas</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS554-->
+      <button id = "btnIs554" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is554" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is554" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Gestión de Centros de Información</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS552-->
+      <button id = "btnIs552" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is552" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is552" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Soporte para la Toma de Decisiones</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IN542-->
+      <button id = "btnIn542" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#in542" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="in542" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Inglés IV</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IS548-->
+      <button id = "btnIs548" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#is548" style = "background: transparent; border: none !important; font-size:0;"></button>
+      <!-- Modal -->
+      <div class="modal fade" id="is548" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Planeamiento Estratégico de Negocios</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+      <!--PROGRESO-->
+    <div class="row">
+    <div class="col-md-12">
+      <div class="row base_progreso">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 base_progreso abajo">
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%" class="progress-bar">20% Complete</div>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+      
+    </div>
+    <!-- Pie de Pagina-->
+    <footer id="eventSpan" class="base_pie">
+        <br>
+        <p class="MsoNormal" align="center" style="margin-bottom: 0.0001pt; text-align: center; line-height: 9.95pt;"><b><span style="font-family: Arial, sans-serif; color: #000000;">Universidad Nacional de San Cristóbal de Huamanga</span>&nbsp;</b></p>
+
+        <p class="MsoNormal" align="center" style="margin-bottom: 0.0001pt; text-align: center; line-height: 9.95pt;"><span style="font-weight: bold; font-size: 11px; color: #000000;">&nbsp;<span style="font-family: Arial; color: #000000;">Portal Independencia N° 57 Ayacucho &nbsp;&nbsp;</span></span><span style="font-family: Arial; font-size: 11px; font-weight: bold; color: #000000;">&nbsp;Central Telefónico&nbsp;066-312230 - 066-312510</span></p>
+        
+        <p style="text-align: center;">
+          <span style="font-weight: bold;">
+            <span style="line-height: 13px;">
+              <span style="font-family: Arial; font-size: 11px; color: #000000;">© Copyright &nbsp; &nbsp;OGIS - &nbsp;UNSCH - 2016 &nbsp; Ayacucho
+              </span>
+            </span>
+          </span></p>
+        <p class="MsoNormal" align="center" style="margin-bottom: 0.0001pt; text-align: center; line-height: 9.95pt;">
+          <span style="color: #5D6674; font-family: Arial, sans-serif; font-weight: bold;"><br>
+          </span></p>
+    </footer>
     <!-- SCRIPT DE MALLA CURRICULAR ACTUAL-->
     <script type = "text/javascript" src="grafo.js"></script>
   </body>
