@@ -94,9 +94,14 @@ footer {
 .bordes_todo{
     border: 5px solid lightgray;
 }
+
+.bordes-sin-derecha{
+    border: 5px solid lightgray;
+    border-right: 0px;
+}
 #myRed {
 
-    width: 873px;
+    /*width: 873px;*/
     height: 410px;
     border: 5px solid lightgray;
     
@@ -112,8 +117,8 @@ footer {
 }
 
 #div_leyenda{
-    width: 170px;
-    height: 409px;
+    /*width: 170px;*/
+    height: 408px;
     position: relative;    
     overflow-y: hidden;
 }
@@ -123,7 +128,7 @@ footer {
     overflow-y: hidden;
 }
 #div_titulo_configuracion{
-    width: 200px;
+    /*width: 200px;*/
     height: 38px;
     position: relative;    
     overflow-y: hidden;

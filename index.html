@@ -16,24 +16,13 @@
     <!-- tipo de letra patua-->
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 
-    <style type="text/css" rel="stylesheet"> 
-
-      a:link {text-decoration:none;color:#0000cc;} 
-
-      a:visited {text-decoration:none;color:#ffcc33;} 
-
-      a:active {text-decoration:none;color:#ff0000;} 
-
-      a:hover {text-decoration:underline;color:#999999;} 
-
-    </style> 
   </head>
 
 
-  <body>
-    <div>
+  <body background="img/fondo.png">
+    <div class = "container">
     <!-- CABECERA-->
-    <header class="base_cabecera">
+    <header class="base_cabecera row">
       <div class="row">
         <div class="col-xs-8 col-md-3"><a href="http://www.unsch.edu.pe/" target="_self "><img src="img/logo_unsch.png" class="mediano"></a></div>
         <div class="cols-xs-1 col-md-6 text-center">
@@ -44,9 +33,9 @@
     </header>
     <!-- Navegacion-->
     
-    <nav class="base_navegacion text-center" >
+    <nav class="base_navegacion text-center row" >
       <div class="container">
-        <ul style="list-style:none" class=""">
+        <ul style="list-style:none; padding:0;" class="">
           <li class="col-md-4"><a href="/" style="text-decoration: none; color:#FFFFFF;">
               <h4 class="letra_mediano"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Home</h4></a></li>
           <li class="col-md-4"><a href="/estadisticas" style="text-decoration: none; color:#FFFFFF;">
@@ -61,7 +50,7 @@
     <!-- Contenido-->
     <div class="row" id="cuerpo">
       <div class="col-md-2 base_perfil">
-        <div id ="div_titulo_configuracion" class="base_serie text-center bordes_todo" style="padding-top:1px">
+        <div id ="div_titulo_configuracion" class="row base_serie text-center bordes-sin-derecha" style="padding-top:1px">
            <label for="" class="letra_serie">USUARIO</label>
         </div>
         <div id="perfil" class="row" >
@@ -91,7 +80,7 @@
       </div>
 
       <!--CUERPO-->
-      <div class="col-md-10 text-justify base_cuerpo">
+      <div class="col-md-10 text-justify base_cuerpo" style="background-color:#585858">
         <div class="row text-center">
           <div class="col-md-1 bordes base_serie">
             <label for="" class="letra_serie">100-I</label>
@@ -123,7 +112,7 @@
           <div class="col-md-1 bordes-top bordes-right base_serie">
             <label for="" class="letra_serie">500-II</label>
           </div>
-          <div class="col-md-2 base_serie bordes-top">
+          <div class="col-md-2 base_serie bordes-top bordes-right">
             <label for="" class="letra_serie">LEYENDA</label>
           </div>
         </div>
@@ -137,7 +126,6 @@
       </div>
     </div>
 
-    </div>
     <div>
     <!--MENSAJE INFORMATIVO-->
     <div class="div_cursos">
@@ -1690,7 +1678,7 @@
       
     </div>
     <!-- Pie de Pagina-->
-    <footer id="eventSpan" class="base_pie">
+    <footer id="eventSpan" class="base_pie row">
         <br>
         <p class="MsoNormal" align="center" style="margin-bottom: 0.0001pt; text-align: center; line-height: 9.95pt;"><b><span style="font-family: Arial, sans-serif; color: #000000;">Universidad Nacional de San Cristóbal de Huamanga</span>&nbsp;</b></p>
 
@@ -1709,5 +1697,6 @@
     </footer>
     <!-- SCRIPT DE MALLA CURRICULAR ACTUAL-->
     <script type = "text/javascript" src="grafo.js"></script>
+  </div>
   </body>
 </html>

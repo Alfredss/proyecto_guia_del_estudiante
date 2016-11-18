@@ -133,8 +133,8 @@ edges : aristas
 
 //Configuracion de algunos valores
 var opciones = {
-    height:'400px',
-    width:'840px',
+    //height:'400px',
+    //width:'840px',
     interaction:{
         hover:true,
     },
@@ -142,7 +142,7 @@ var opciones = {
         hierarchical:{
             enabled:true,
             direction:'LR',
-            levelSeparation:87,
+            levelSeparation:80,
             //blockShifting: true,
             nodeSpacing: 40,
             treeSpacing: 0,                
