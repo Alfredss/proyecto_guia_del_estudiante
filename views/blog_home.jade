@@ -1,0 +1,180 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(content='IE=edge', http-equiv='X-UA-Compatible')
+    meta(content='width=device-width, initial-scale=1', name='viewport')
+    meta(content='', name='description')
+    meta(content='', name='author')
+    title
+      | Blog Home
+    // Bootstrap Core CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    // Custom CSS
+    link(href='css/blog.css', rel='stylesheet')
+    // main.css
+    link(href='css/main.css', rel='stylesheet')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body(background='img/fondo.png')
+    .container(style='background-color:#ffffff;')
+      // Navigation
+      nav.navbar.navbar-inverse.navbar-fixed-top.container(role='navigation')
+        .container
+          // Brand and toggle get grouped for better mobile display
+          #nav_titulos.navbar-header
+            a.navbar-brand(href='/index')
+              | Home
+          // Collect the nav links, forms, and other content for toggling
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li
+                a(href='#')
+                  | Acerca de
+              li
+                a(href='#')
+                  | Servicios
+              li
+                a(href='#')
+                  | Contactos
+          // /.navbar-collapse
+        // /.container
+      // Page Content
+      .container
+        .row
+          // Blog Entries Column
+          .col-md-8
+            h1.page-header
+              | Blog Del Estudiante
+              small
+                | Informate e Informanos
+            // First Blog Post
+            h2
+              a(href='#')
+                | Titulo de Post
+            p.lead
+              | por
+              a(href='index.php')
+                | Estudiante Anonimo
+            p
+              span.glyphicon.glyphicon-time
+              |               Posteado en August 28, 2013 at 10:00 PM
+            hr
+            img.img-responsive(alt='', src='http://placehold.it/900x300')
+            hr
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.
+            a.btn.btn-primary(href='/blog_post')
+              | Leer más
+              span.glyphicon.glyphicon-chevron-right
+            hr
+            // Second Blog Post
+            h2
+              a(href='#')
+                | Blog Post Title
+            p.lead
+              | by
+              a(href='index.php')
+                | Start Bootstrap
+            p
+              span.glyphicon.glyphicon-time
+              |                       Posted on August 28, 2013 at 10:45 PM
+            hr
+            img.img-responsive(alt='', src='http://placehold.it/900x300')
+            hr
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quasi, fugiat, asperiores harum voluptatum tenetur a possimus nesciunt quod accusamus saepe tempora ipsam distinctio minima dolorum perferendis labore impedit voluptates!
+            a.btn.btn-primary(href='#')
+              | Read More
+              span.glyphicon.glyphicon-chevron-right
+            hr
+            // Third Blog Post
+            h2
+              a(href='#')
+                | Blog Post Title
+            p.lead
+              | by
+              a(href='index.php')
+                | Start Bootstrap
+            p
+              span.glyphicon.glyphicon-time
+              |                               Posted on August 28, 2013 at 10:45 PM
+            hr
+            img.img-responsive(alt='', src='http://placehold.it/900x300')
+            hr
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptates, voluptas dolore ipsam cumque quam veniam accusantium laudantium adipisci architecto itaque dicta aperiam maiores provident id incidunt autem. Magni, ratione.
+            a.btn.btn-primary(href='#')
+              | Read More
+              span.glyphicon.glyphicon-chevron-right
+            hr
+            // Pager
+            ul.pager
+              li.previous
+                a(href='#')
+                  | ← Older
+              li.next
+                a(href='#')
+                  | Newer →
+          // Blog Sidebar Widgets Column
+          .col-md-4
+            // Blog Search Well
+            .well
+              h4
+                | Blog Busqueda
+              .input-group
+                input.form-control(type='text')
+                span.input-group-btn
+                  button.btn.btn-default(type='button')
+                    span.glyphicon.glyphicon-search
+              // /.input-group
+            // Blog Categories Well
+            .well
+              h4
+                | Blog Categorias
+              .row
+                .col-lg-6
+                  ul.list-unstyled
+                    li
+                      a(href='#')
+                        | Categoria Serie 100
+                    li
+                      a(href='#')
+                        | Categoria Serie 200
+                    li
+                      a(href='#')
+                        | Categoria Serie 300
+                    li
+                      a(href='#')
+                        | Categoria Serie 400
+                    li
+                      a(href='#')
+                        | Categoria Serie 500
+                // /.col-lg-6
+                .col-lg-6
+                // /.col-lg-6
+              // /.row
+            // Side Widget Well
+            .well
+              h4
+                | Side Widget Well
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.
+        // /.row
+        hr
+        // Footer
+        footer
+          .row
+            .col-lg-12
+              p
+                | Copyright © Your Website 2014
+            // /.col-lg-12
+          // /.row
+      // /.container
+      // jQuery
+      script(src='js/jquery.js')
+      // Bootstrap Core JavaScript
+      script(src='js/bootstrap.min.js')

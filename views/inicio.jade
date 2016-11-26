@@ -1,0 +1,133 @@
+doctype html
+html(lang='en')
+  head
+    meta(content='RevealTrans(Duration=4,Transition=2)', http-equiv='Page-Enter')
+    meta(content='text/html; charset=utf-8', http-equiv='Content-Type')
+    title
+      | Inicio
+    // Estilo inicio.CSS
+    link(href='css/inicio.css', rel='stylesheet')
+    // Estilos de Grafos
+    link(href='css/main.css', rel='stylesheet')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
+    link(href='librerias/dist/vis.css', rel='stylesheet')
+    script(src='librerias/dist/vis.js', type='text/javascript')
+    link(href='librerias/dist/vis-network.min.css', rel='stylesheet', type='text/css')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script.
+      /**
+      * Array con las imagenes que se iran mostrando en la web
+      */
+      var imagenes=new Array(
+      'img/sistemas01.jpg',
+      'img/sistemas02.jpg',
+      'img/sistemas03.jpg'
+      );
+      /**
+      * Funcion para cambiar la imagen
+      */
+      function rotarImagenes()
+      {
+      // obtenemos un numero aleatorio entre 0 y la cantidad de imagenes que hay
+      var index=Math.floor((Math.random()*imagenes.length));
+      // cambiamos la imagen
+      document.getElementById("imagen").src=imagenes[index];
+      }
+      /**
+      * Función que se ejecuta una vez cargada la página
+      */
+      onload=function()
+      {
+      // Cargamos una imagen aleatoria
+      rotarImagenes();
+      // Indicamos que cada 5 segundos cambie la imagen
+      setInterval(rotarImagenes,3000);
+      }
+    // tipo de letra patua
+    link(href='https://fonts.googleapis.com/css?family=Courgette', rel='stylesheet')
+  body(background='img/fondo.png')
+    .container(style='background-image:url(img/fondo_inicio.png);')
+      header.base_cabecera.row
+        .row
+          .col-xs-8.col-md-3
+            a(href='http://www.unsch.edu.pe/', target='_self ')
+              img.mediano(src='img/logo_unsch.png')
+          .cols-xs-1.col-md-6.text-center
+            h1.letra_Patua_One
+              | Guia Experta del Estudiante
+          .col-md-3
+            a(href='https://www.facebook.com/groups/1425237611081130/?fref=ts', target='_self ')
+              img.mediano.derecha(src='img/logo_is.jpg')
+      section
+        .row
+          // PARTTE 01
+          .col-md-6.text-center
+            // PARTTE 01 reducido
+            .row
+              .col-md-2
+              .col-md-8
+                div
+                  figure(style='text-align:center;')
+                    img#imagen(alt='', src='')
+                hr
+                h3
+                  | Bienvenido a nuestro Sitio Web
+                p
+                  | Si Eres Estudiante de la UNSCH aqui podras
+                  | registrar tu avance en el semestre, recbir
+                  | consejos que mejoraran tu progreso academico en
+                  | la Universidad, realizar un seguimiento de los curos
+                  | mas importantes y obtener la informacion mas actualizada
+                  | e importante que te serviran en cada semestre academico.
+                p
+                  | Que esperas Registrate y empieza a crear tu destino
+              .col-md-2
+            // PARTTE 01 reducido
+          // PARTTE 01
+          // PARTTE 02
+          .col-md-6.text-center
+            // PARTTE 02 Resumida
+            .row
+              .col-md-3
+              .col-md-6
+                h2
+                  | Iniciar session
+                form(action='/login', method='post')
+                  #div_usuario.input-group
+                    span.input-group-addon
+                      span.glyphicon.glyphicon-user
+                    input.form-control(name='user', placeholder='Usuario', type='text')
+                  #div_password.input-group
+                    span.input-group-addon
+                      span.glyphicon.glyphicon-lock
+                    input.form-control(name='password', placeholder='Contraseña', type='password')
+                  input#btnIniciar.btn.btn-success(type='submit', value='Iniciar Sesion')
+              .col-md-3
+            #divRegistrarse.row
+              | Eres Nuevo?
+              a(href='/registrarse')
+                | Registrate
+            // PARTTE 02 resumida
+          // PARTTE 01
+      // FIIN SECTION
+      // Footer
+      footer#footer_inicio.base_pie.row
+        br
+        p.MsoNormal(align='center', style='margin-bottom: 0.0001pt; text-align: center; line-height: 9.95pt;')
+          b
+            span(style='font-family: Arial, sans-serif; color: #000000;')
+              | Universidad Nacional de San Cristóbal de Huamanga
+        p.MsoNormal(align='center', style='margin-bottom: 0.0001pt; text-align: center; line-height: 9.95pt;')
+          span(style='font-weight: bold; font-size: 11px; color: #000000;')
+            span(style='font-family: Arial; color: #000000;')
+              | Portal Independencia N° 57 Ayacucho
+          span(style='font-family: Arial; font-size: 11px; font-weight: bold; color: #000000;')
+            | Central Telefónico 066-312230 - 066-312510
+        p(style='text-align: center;')
+          span(style='font-weight: bold;')
+            span(style='line-height: 13px;')
+              span(style='font-family: Arial; font-size: 11px; color: #000000;')
+                | © Copyright    OGIS -  UNSCH - 2016   Ayacucho
+      // Fin Footer
