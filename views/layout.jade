@@ -4,40 +4,50 @@ html(lang='en')
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
     title Guia Del Experta del Estudiante
     // Estilos de Grafos
+    link(rel='stylesheet', href='../css/main.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
     link(rel='stylesheet', href='librerias/dist/vis.css')
-    // Javascript Grafos
     script(type='text/javascript', src='librerias/dist/vis.js')
-    // Esstiolos Bootstrap
-    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(href='librerias/dist/vis-network.min.css', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    // tipo de letra patua
+    link(href='https://fonts.googleapis.com/css?family=Courgette', rel='stylesheet')
+    //link(rel='stylesheet', href='librerias/dist/vis.css')
+    // Javascript Grafos
+    //script(type='text/javascript', src='librerias/dist/vis.js')
+    // Estilos Bootstrap
+    //link(rel='stylesheet', href='css/bootstrap.min.css')
     // Tema opcional
-    link(rel='stylesheet', href='css/bootstrap-theme.min.css')
+    //link(rel='stylesheet', href='css/bootstrap-theme.min.css')
     // Versión compilada y comprimida del JavaScript de Bootstrap
-    script(src='js/bootstrap.min.js')
+    //script(src='js/bootstrap.min.js')
     // Estilos Main
-    link(rel='stylesheet', href='css/main.css')
+    //link(rel='stylesheet', href='css/main.css')
     // tipo de letra lobster
   body
     // CABECERA
     header.bg-info
       .row
         .col-xs-8.col-md-3
-          img.mediano(src='img/logo_unsch.png')
+          img.mediano(src='../img/logo_unsch.png')
         .cols-xs-1.col-md-6.text-center
           h1 Guia Experta del Estudiante
         .col-xs-8.col-md-3
-          img.mediano.derecha(src='img/logo_is.jpg')
+          img.mediano.derecha(src='../img/logo_is.jpg')
     // Navegacion
     nav.navbar.navbar-inverse.text-center.navbar-static-top
       .container
         ul
           li.col-md-4
-            a(href='/index')
+            a(href='/app')
               h4 Home
           li.col-md-4
-            a(href='/estadisticas')
+            a(href='app/estadisticas')
               h4 Estadisticas
           li.col-md-4
-            a(href='/blog')
+            a(href='app/blog')
               h4 Blog
     block encabezado
     footer

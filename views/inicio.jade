@@ -9,7 +9,7 @@ html(lang='en')
     link(href='css/inicio.css', rel='stylesheet')
     // Estilos de Grafos
     link(href='css/main.css', rel='stylesheet')
-    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
+      
     link(href='librerias/dist/vis.css', rel='stylesheet')
     script(src='librerias/dist/vis.js', type='text/javascript')
     link(href='librerias/dist/vis-network.min.css', rel='stylesheet', type='text/css')
@@ -30,20 +30,20 @@ html(lang='en')
       */
       function rotarImagenes()
       {
-      // obtenemos un numero aleatorio entre 0 y la cantidad de imagenes que hay
-      var index=Math.floor((Math.random()*imagenes.length));
-      // cambiamos la imagen
-      document.getElementById("imagen").src=imagenes[index];
+        // obtenemos un numero aleatorio entre 0 y la cantidad de imagenes que hay
+        var index=Math.floor((Math.random()*imagenes.length));
+        // cambiamos la imagen
+        document.getElementById("imagen").src=imagenes[index];
       }
       /**
       * Función que se ejecuta una vez cargada la página
       */
       onload=function()
       {
-      // Cargamos una imagen aleatoria
-      rotarImagenes();
-      // Indicamos que cada 5 segundos cambie la imagen
-      setInterval(rotarImagenes,3000);
+        // Cargamos una imagen aleatoria
+        rotarImagenes();
+        // Indicamos que cada 5 segundos cambie la imagen
+        setInterval(rotarImagenes,3000);
       }
     // tipo de letra patua
     link(href='https://fonts.googleapis.com/css?family=Courgette', rel='stylesheet')

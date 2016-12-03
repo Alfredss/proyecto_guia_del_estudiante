@@ -9,24 +9,24 @@ html(lang='en')
     title
       | Blog Home
     // Bootstrap Core CSS
-    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='../css/bootstrap.min.css', rel='stylesheet')
     // Custom CSS
-    link(href='css/blog.css', rel='stylesheet')
+    link(href='../css/blog.css', rel='stylesheet')
     // main.css
-    link(href='css/main.css', rel='stylesheet')
+    link(href='../css/main.css', rel='stylesheet')
     // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
     // WARNING: Respond.js doesn't work if you view the page via file://
     //if lt IE 9
       script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
       script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
-  body(background='img/fondo.png')
+  body(background='../img/fondo.png')
     .container(style='background-color:#ffffff;')
       // Navigation
       nav.navbar.navbar-inverse.navbar-fixed-top.container(role='navigation')
         .container
           // Brand and toggle get grouped for better mobile display
           #nav_titulos.navbar-header
-            a.navbar-brand(href='/index')
+            a.navbar-brand(href='/app')
               | Home
           // Collect the nav links, forms, and other content for toggling
           #bs-example-navbar-collapse-1.collapse.navbar-collapse
@@ -67,7 +67,7 @@ html(lang='en')
             hr
             p
               | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.
-            a.btn.btn-primary(href='/blog_post')
+            a.btn.btn-primary(href='blog_post')
               | Leer más
               span.glyphicon.glyphicon-chevron-right
             hr
