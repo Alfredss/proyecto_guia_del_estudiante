@@ -7,8 +7,8 @@ var router_app = require("./routes_app");
 var session_middleware = require("./middlewares/sessions")
     //IMPORTACIONES MODELOS
 var Usuario = require("./models/usuario.js").Usuario;
-//var Estudiante = require("./models/estudiante.js").Estudiante;
 var Curso = require("./models/curso.js").Curso;
+var Estudiante = require("./models/estudiante.js").Estudiante;
 app.set("view engine", "jade"); //inicializamos el motor de vista
 app.use(express.static("public")); //habilitamos la carpeta public para que almacene recursos
 app.use(bodyParser.json()); //para peticiones con el formato application/json
@@ -26,6 +26,9 @@ app.get("/", function(req, res) {
     req.session.user_id = null;
     res.render("inicio");
 }); //acceso a principal
+app.get("/registrarse", function(req, res) {
+    res.render("registrarse");
+});
 /*
 app.get("/index", function(req, res) {
     Curso.find({}, {
@@ -52,7 +55,59 @@ app.post("/login", function(req, res) {
             res.render("inicio");
         }
     });
-}); //post login
+});
+app.post("/registrar", function(req, res) {
+    var user = new Usuario({
+        codigo_estudiante: req.body.codigo,
+        nombre_usuario: req.body.usuario,
+        password: req.body.password
+    });
+    var student = new Estudiante({
+        codigo_estudiante: req.body.codigo,
+        dni_estudiante: req.body.dni,
+        apellidos_estudiante: req.body.apellidos,
+        nombres_estudiante: req.body.nombre,
+        facultad_estudiante: req.body.facultad,
+        escuela_estudiante: req.body.escuela,
+        serie_estudiante: req.body.serie
+    });
+    if (req.body.password == req.body.password_r) {
+        user.save(function(err) {
+            console.log("usuario guardado correctamente");
+            console.log(String(err));
+        });
+        student.save(function() {
+            console.log("estudiante guardado correctamente");
+        });
+        res.render("inicio");
+    } else {
+        res.render("registrarse");
+    }
+});
+app.post("/edit", function(req, res) {
+    Usuario.findById(req.session.user_id, function(err, data) {
+        Estudiante.find({
+            codigo_estudiante: data.codigo_estudiante
+        }, function(err, dato) {
+            Estudiante.findById(dato[0]._id, function(err, inf) {
+                data.codigo_estudiante = req.body.codigo;
+                data.nombre_usuario = req.body.usuario;
+                data.password = req.body.password;
+                inf.codigo_estudiante = req.body.codigo;
+                inf.dni_estudiante = req.body.dni;
+                inf.apellidos_estuiante = req.body.apellidos;
+                inf.nombres_estudiante = req.body.nombre;
+                inf.facultad_estudiante = req.body.facultad;
+                inf.escuela_estudiante = req.body.escuela;
+                inf.serie_estudiante = req.body.serie;
+                data.save(function(err) {});
+                inf.save(function(err) {});
+                res.redirect("/app")
+            });
+        });
+    });
+});
+//post login
 /*
 app.get("/estadisticas", function(req, res) {
     res.render("app/estadisticas");

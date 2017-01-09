@@ -68,7 +68,8 @@ html(lang='en')
                 li
                   a(href='#') Tu Nombre
                 li
-                  a(href='/configuracion') Configuracion
+                  hr
+                  a(href='app/configuracion') Configuracion
                 li
                   a(href='/') Salir
             .col-md-1
@@ -140,6 +141,19 @@ html(lang='en')
                 context.beginPath();
                 context.rect(10, 10, 60, 30);
                 context.fillStyle = 'white';
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = 'black';
+                context.stroke();
+              strong
+                p.letra_Patua_One cursos ingles
+              canvas#ingles(width='80', height='50', style='background-color:#ffffff')
+              script.
+                var canvas = document.getElementById('ingles');
+                var context = canvas.getContext('2d');
+                context.beginPath();
+                context.rect(10, 10, 60, 30);
+                context.fillStyle = 'yellow';
                 context.fill();
                 context.lineWidth = 1;
                 context.strokeStyle = 'black';

@@ -1,0 +1,51 @@
+extends layout.jade
+block encabezado
+     .row
+          .col-md-3
+          .col-md-6.form-group
+            h2.text-center(style='color:white;')
+              | Ingresar Datos Principales
+            form(action='/registrar', method='post')
+              #div_usuario.input-group(style='')
+                span.input-group-addon
+                  span.glyphicon.glyphicon-user
+                input.form-control(name='nombre', placeholder='Nombre', type='text')
+              #div_usuario.input-group(style='padding-top:10px')
+                span.input-group-addon
+                  span.glyphicon.glyphicon-user
+                input.form-control(name='apellidos', placeholder='Apellidos', type='text')
+              #div_usuario.input-group(style='padding-top:10px')
+                span.input-group-addon
+                  span.glyphicon.glyphicon-briefcase
+                input.form-control(name='codigo', placeholder='Codigo de Estudiante', type='text')
+              #div_usuario.input-group(style='padding-top:10px')
+                span.input-group-addon
+                  span.glyphicon.glyphicon-briefcase
+                input.form-control(name='dni', placeholder='Dni', type='text')
+              #div_usuario.input-group(style='padding-top:10px')
+                span.input-group-addon
+                  span.glyphicon.glyphicon-home
+                input.form-control(name='facultad', placeholder='Facultad', type='text')
+              #div_usuario.input-group(style='padding-top:10px')
+                span.input-group-addon
+                  span.glyphicon.glyphicon-home
+                input.form-control(name='escuela', placeholder='Escuela', type='text')
+              #div_usuario.input-group(style='padding-top:10px')
+                span.input-group-addon
+                  span.glyphicon.glyphicon-home
+                input.form-control(name='serie', placeholder='Serie', type='text')
+              #div_usuario.input-group(style='padding-top:10px')
+                span.input-group-addon
+                  span.glyphicon.glyphicon-user
+                input.form-control(name='usuario', placeholder='Usuario', type='text')
+              #div_password.input-group(style='padding-top:10px')
+                span.input-group-addon
+                  span.glyphicon.glyphicon-lock
+                input.form-control(name='password', placeholder='Contraseña', type='password')
+              #div_password.input-group(style='padding-top:10px')
+                span.input-group-addon
+                  span.glyphicon.glyphicon-lock
+                input.form-control(name='password_r', placeholder='Repetir Contraseña', type='password')
+              br
+              input#btnIniciar.btn.btn-success(type='submit', value='Guardar')(style='padding-top:10px; text-align:center;')
+          .col-md-3

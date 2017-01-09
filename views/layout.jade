@@ -26,29 +26,37 @@ html(lang='en')
     // Estilos Main
     //link(rel='stylesheet', href='css/main.css')
     // tipo de letra lobster
-  body
-    // CABECERA
-    header.bg-info
-      .row
-        .col-xs-8.col-md-3
-          img.mediano(src='../img/logo_unsch.png')
-        .cols-xs-1.col-md-6.text-center
-          h1 Guia Experta del Estudiante
-        .col-xs-8.col-md-3
-          img.mediano.derecha(src='../img/logo_is.jpg')
-    // Navegacion
-    nav.navbar.navbar-inverse.text-center.navbar-static-top
-      .container
-        ul
-          li.col-md-4
-            a(href='/app')
-              h4 Home
-          li.col-md-4
-            a(href='app/estadisticas')
-              h4 Estadisticas
-          li.col-md-4
-            a(href='app/blog')
-              h4 Blog
-    block encabezado
-    footer
+  body(background='../img/fondo.png')
+    .container
+      header.bg-info
+        .row
+          .col-xs-8.col-md-3
+            a(href='http://www.unsch.edu.pe/', target='_self ')
+              img.mediano(src='../img/logo_unsch.png')
+          .cols-xs-1.col-md-6.text-center
+            h1.letra_Patua_One Guia Experta del Estudiante
+          .col-xs-8.col-md-3
+            a(href='https://www.facebook.com/groups/1425237611081130/?fref=ts', target='_self ')
+              img.mediano.derecha(src='../img/logo_is.jpg')
+      nav.navbar.navbar-inverse.text-center.navbar-static-top
+        .container
+          ul(style='list-style:none; padding:0;')
+            li.col-md-4
+              a(href='/app', style='text-decoration: none; color:#FFFFFF;')
+                h4.letra_mediano
+                  span.glyphicon.glyphicon-home(aria-hidden='true')
+                  |  Home
+            li.col-md-4
+              a(href='/app/estadisticas', style='text-decoration: none; color:#FFFFFF;')
+                h4.letra_mediano
+                  span.glyphicon.glyphicon-signal(aria-hidden='true')
+                  |  Estadisticas
+            li.col-md-4
+              a(href='/app/blog', style='text-decoration: none; color:#FFFFFF;')
+                h4.letra_mediano
+                  span.glyphicon.glyphicon-file(aria-hidden='true')
+                  |  Blog
+      block encabezado
+      footer
+    
     

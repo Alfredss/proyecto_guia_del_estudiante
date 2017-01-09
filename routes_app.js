@@ -3,6 +3,7 @@ var app = express();
 var router = express.Router();
 var Usuario = require("./models/usuario.js").Usuario;
 var Curso = require("./models/curso.js").Curso;
+var Estudiante = require("./models/estudiante.js").Estudiante;
 //app.use(express.static("public")); //habilitamos la carpeta public para que almacene recursos
 router.get("/", function(req, res) {
     Curso.find({}, {
@@ -30,6 +31,17 @@ router.get("/informacion", function(req, res) {
     res.render("app/informacion");
 });
 router.get("/configuracion", function(req, res) {
-    res.render("app/configuracion");
+    var codigo;
+    Usuario.findById(req.session.user_id, function(err, data) {
+        codigo = data.codigo_estudiante;
+        Estudiante.find({
+            codigo_estudiante: codigo
+        }, function(err, dato) {
+            res.render("app/configuracion", {
+                dato: dato,
+                data: data
+            });
+        });
+    });
 });
 module.exports = router;
