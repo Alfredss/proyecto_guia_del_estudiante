@@ -1,0 +1,212 @@
+.pequenio {
+    width: 80px;
+    height: 80px;
+}
+
+.mediano {
+    width: 100px;
+    height: 100px;
+}
+
+.grande {
+    width: 200px;
+    height: 200px;
+}
+
+.izquierda {
+    float: left;
+}
+
+.derecha {
+    float: right;
+}
+
+.centro {
+    float: center;
+}
+
+.arriba {
+    margin-top: 0px;
+}
+
+body {
+    padding-right: 0px;
+}
+
+h1 {
+    font-family: Lobster;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+}
+
+header {
+    display: block;
+    /*background:#286af0;*/
+    padding: 0px 0px;
+}
+
+section {
+    padding: 0px;
+    margin: 0px;
+}
+
+aside {
+    padding: 0px;
+    margin: 0px;
+}
+
+footer {
+    position: relative;
+    margin-top: 0px;
+    /*height: 90px;*/
+    padding: 5px 0px;
+    clear: both;
+    background: #286af0;
+    text-align: center;
+    color: #fff;
+}
+
+.libre_arriba {
+    margin-top: 0px;
+}
+
+.img_center {}
+
+.bordes {
+    border: 5px solid lightgray;
+    border-bottom: 0px;
+}
+
+.bordes-top {
+    border-top: 5px solid lightgray;
+}
+
+.bordes-right {
+    border-right: 5px solid lightgray;
+}
+
+.bordes_todo {
+    border: 5px solid lightgray;
+}
+
+.bordes-sin-derecha {
+    border: 5px solid lightgray;
+    border-right: 0px;
+}
+
+#contenedor_principal {
+    padding-top: 10px;
+}
+
+#myRed {
+    /*width: 873px;*/
+    height: 410px;
+    border: 5px solid lightgray;
+    position: relative;
+    overflow-y: hidden;
+    top: 0px;
+}
+
+#cuerpo {
+    position: relative;
+    overflow-y: hidden;
+    top: 0px;
+}
+
+#div_leyenda {
+    height: 410px;
+    position: relative;
+    overflow-y: hidden;
+}
+
+#div_configuracion {
+    height: 304px;
+    position: relative;
+    overflow-y: hidden;
+}
+
+#div_titulo_configuracion {
+    /*width: 200px;*/
+    height: 40px;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.div_cursos {
+    height: 0px;
+    position: relative;
+    overflow-y: hidden;
+    top: -20px
+}
+
+.letra_Patua_One {
+    font-family: 'Courgette', cursive;
+}
+
+.base_cabecera {
+    background-color: #FFFBE0;
+}
+
+.base_navegacion {
+    background-color: #1A1A1B;
+}
+
+.base_perfil {
+    background-color: #2E94B9;
+}
+
+.base_leyenda {
+    background-color: #2E94B9;
+}
+
+.base_cuerpo {
+    background-color: #F9FCFD;
+}
+
+.base_pie {
+    background-color: #3A7563;
+}
+
+.base_progreso {
+    background-color: #259073;
+}
+
+.base_malla {
+    background-color: #122D42;
+}
+
+.base_serie {
+    background-color: #2E94B9;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+.letra_mediano {
+    font-size: 17px;
+}
+
+.abajo {
+    padding-top: 16px;
+}
+
+.letra_serie {
+    color: #000000;
+    padding-top: 5px;
+}

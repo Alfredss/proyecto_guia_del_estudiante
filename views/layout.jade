@@ -4,40 +4,61 @@ html(lang='en')
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
     title Guia Del Experta del Estudiante
     // Estilos de Grafos
+    link(rel='stylesheet', href='../css/main.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
     link(rel='stylesheet', href='librerias/dist/vis.css')
-    // Javascript Grafos
     script(type='text/javascript', src='librerias/dist/vis.js')
-    // Esstiolos Bootstrap
-    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(href='librerias/dist/vis-network.min.css', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    // tipo de letra patua
+    link(href='https://fonts.googleapis.com/css?family=Courgette', rel='stylesheet')
+    script(src='../js/Chart.js')
+    script(src='../js/grafico.js')    
+    //link(rel='stylesheet', href='librerias/dist/vis.css')
+    // Javascript Grafos
+    //script(type='text/javascript', src='librerias/dist/vis.js')
+    // Estilos Bootstrap
+    //link(rel='stylesheet', href='css/bootstrap.min.css')
     // Tema opcional
-    link(rel='stylesheet', href='css/bootstrap-theme.min.css')
+    //link(rel='stylesheet', href='css/bootstrap-theme.min.css')
     // Versión compilada y comprimida del JavaScript de Bootstrap
-    script(src='js/bootstrap.min.js')
+    //script(src='js/bootstrap.min.js')
     // Estilos Main
-    link(rel='stylesheet', href='css/main.css')
+    //link(rel='stylesheet', href='css/main.css')
     // tipo de letra lobster
-  body
-    // CABECERA
-    header.bg-info
-      .row
-        .col-xs-8.col-md-3
-          img.mediano(src='img/logo_unsch.png')
-        .cols-xs-1.col-md-6.text-center
-          h1 Guia Experta del Estudiante
-        .col-xs-8.col-md-3
-          img.mediano.derecha(src='img/logo_is.jpg')
-    // Navegacion
-    nav.navbar.navbar-inverse.text-center.navbar-static-top
-      .container
-        ul
-          li.col-md-4
-            a(href='/')
-              h4 Home
-          li.col-md-4
-            a(href='/estadisticas')
-              h4 Estadisticas
-          li.col-md-4
-            a(href='/block')
-              h4 Blog
-    footer
-    block encabezado
+  body(background='../img/fondo.png')
+    .container
+      header.bg-info
+        .row
+          .col-xs-8.col-md-3
+            a(href='http://www.unsch.edu.pe/', target='_self ')
+              img.mediano(src='../img/logo_unsch.png')
+          .cols-xs-1.col-md-6.text-center
+            h1.letra_Patua_One Guia Experta del Estudiante
+          .col-xs-8.col-md-3
+            a(href='https://www.facebook.com/groups/1425237611081130/?fref=ts', target='_self ')
+              img.mediano.derecha(src='../img/logo_is.jpg')
+      nav.navbar.navbar-inverse.text-center.navbar-static-top
+        .container
+          ul(style='list-style:none; padding:0;')
+            li.col-md-4
+              a(href='/app', style='text-decoration: none; color:#FFFFFF;')
+                h4.letra_mediano
+                  span.glyphicon.glyphicon-home(aria-hidden='true')
+                  |  Home
+            li.col-md-4
+              a(href='/app/estadisticas', style='text-decoration: none; color:#FFFFFF;')
+                h4.letra_mediano
+                  span.glyphicon.glyphicon-signal(aria-hidden='true')
+                  |  Estadisticas
+            li.col-md-4
+              a(href='/app/blog', style='text-decoration: none; color:#FFFFFF;')
+                h4.letra_mediano
+                  span.glyphicon.glyphicon-file(aria-hidden='true')
+                  |  Blog
+      block encabezado
+      footer
+    
+    
