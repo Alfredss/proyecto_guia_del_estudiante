@@ -216,3 +216,20 @@ a:active {
     color: #000000;
     padding-top: 5px;
 }
+
+/*Estadisticas*/
+table{
+    border: 1px solid;
+}
+thead{
+    background-color: #58FA82;
+}
+
+#nota{
+    width: 100px;
+    align: 100px;
+}
+
+select{
+    width:50px;
+}

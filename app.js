@@ -56,6 +56,30 @@ app.post("/login", function(req, res) {
         }
     });
 });
+
+app.post("/reg", function(req, res) {
+    Curso.find({
+        "siglo": req.body.siglo
+    },{
+        _id:0,
+        nombre:1,
+        credito:1
+    }, function(err, data) {
+        console.log(data);
+        res.render("app/estadisticas",{
+            data:data
+        });
+        
+
+        //app/estadisticas
+        // if (data.length > 0) {
+        //     req.session.user_id = data[0]._id;
+        //     res.redirect("/app");
+        // } else {
+        //     res.render("inicio");
+        // }
+    });
+});
 app.post("/registrar", function(req, res) {
     var user = new Usuario({
         codigo_estudiante: req.body.codigo,
