@@ -19,7 +19,17 @@ router.get("/", function(req, res) {
     });
 });
 router.get("/estadisticas", function(req, res) {
-    res.render("app/estadisticas");
+    Curso.find({
+        "siglo": req.body.siglo
+    },{
+        nombre:1,
+        credito:1
+    }, function(err, data) {
+        console.log(data);
+        res.render("app/estadisticas",{
+            data:data
+        });
+    });
 });
 router.get("/blog", function(req, res) {
     res.render("app/blog_home");

@@ -14,15 +14,15 @@ block encabezado
 				labels : ["100-I","100-II","200-I","200-II","300-I","300-II","400-I","400-II","500-I","500-II"],
 				datasets : [
 				{
-				label: "Serie de datos",
-				fillColor : "rgba(151,187,205,0.2)",
-				strokeColor : "#e9e225",
-				pointColor : "#faab12",
-				pointStrokeColor : "#fff",
-				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(151,187,205,1)",
-				// CAPTURA DE LOS DATOS DE LA BD
-				data : [12,13,14,13,15,14,12,11,14,13]
+					label: "Serie de datos",
+					fillColor : "rgba(151,187,205,0.2)",
+					strokeColor : "#e9e225",
+					pointColor : "#faab12",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(151,187,205,1)",
+					// CAPTURA DE LOS DATOS DE LA BD
+					data : [12,13,14,13,15,14,12,11,14,13]
 				}
 				]
 				}
@@ -30,4 +30,133 @@ block encabezado
 				window.myPie = new Chart(ctx4).Line(lineChartData, {responsive:true});
 		div.col-md-2
 	div.row
-		
+		div.col-md-2
+		div.col-md-8
+			h3.text-center(style='color:white;')
+				| Registro de Notas
+			div.row
+				
+					div.col-md-4						
+					div.col-md-4.text-center
+						form(action="/reg", method="post")
+							label#ciclo(style='color:white;')
+								| Ciclo
+							select.form-control.center-block(style="width:100px")(name="siglo")
+								option.text-center(value=1)
+									| 1
+								option.text-center(value=2)
+									| 2
+								option.text-center(value=3)
+									| 3
+								option.text-center(value=4)
+									| 4
+								option.text-center(value=5)
+									| 5
+								option.text-center(value=6)
+									| 6
+								option.text-center(value=7)
+									| 7
+								option.text-center(value=8)
+									| 8
+								option.text-center(value=9)
+									| 9
+								option.text-center(value=10)
+									| 10
+							input#btnMostrar.form-control.center-block.btn.btn-success(type="submit", style="width:100px")
+					div.col-md-4
+			h3#ciclo.text-center(style='color:white;')
+				| Registro
+			.panel.panel-default
+				.panel-heading.text-center(style='background-color:#F79F81;') 
+					strong
+						|Registro de Notas
+					p#data(style="color:white; display:none") #{data}
+				
+				script.
+					$(document).ready(function(){
+						var registro=document.getElementById('data').innerHTML;
+						var reg = registro.substring(1,registro.length - 1);
+						var arrayReg = reg.split("},{");
+						
+						var array = [];
+
+						for(i=0;i<arrayReg.length;i++){
+							var a = arrayReg[i].split(",");
+							array.push(a);
+						}
+						
+						for(i=0;i<arrayReg.length;i++){
+							for(j=0;j<2;j++){
+								array[i][j] = array[i][j].substring(10,array[i][j].length);
+								
+								if(j%2==0){
+									array[i][j] = array[i][j].substring(0,array[i][j].length-1);
+								}
+							}
+						}
+
+						var dato = #{data.length};
+						
+						var centinel = 0;
+						function myCreateFunction() {
+							var table = document.getElementById("miTabla");
+							var i = table.rows.length;
+							var row = table.insertRow(i-1);
+							var cell1 = row.insertCell(0);
+							var cell2 = row.insertCell(1);
+							var cell3 = row.insertCell(2);
+							var cell4 = row.insertCell(3);
+							cell1.innerHTML = array[centinel][0];
+							cell2.innerHTML = array[centinel][1];
+							centinel++;
+						}
+						
+						$('#miTabla').addClass("text-center");
+						for(i=0; i<dato; i++){
+							myCreateFunction();
+						}
+
+						$('#miTabla tr').find('td:eq(2)').each(function(){
+							$(this).html('<input id="nota" class="form-control center-block" type="number"/>');
+						});
+
+						$('#miTabla tr').find('td:eq(3)').each(function(){
+							$(this).html('<button id= "boton" class="form-control center-block" onclick="myDeleteFunction()"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></button>');
+						});
+						
+						$('thead').find('td:eq(2)').html("<strong>Nota</strong>");
+						$('thead').find('td:eq(3)').html("<strong>Almacenar</strong>");
+
+						function myDeleteFunction() {
+							var table = document.getElementById("miTabla");
+							var i = table.rows.length;
+							table.deleteRow(i-2);
+						}
+
+						$('#boton').click(function(){
+							 myDeleteFunction();
+						});
+					});
+				table#miTabla.table
+					thead
+						td.text-center
+							strong
+								| Nombre Curso
+						td.text-center
+							strong
+								| Creditos
+						td.text-center
+							| Nota
+						td.text-center
+							| Save
+					tbody
+						
+					tfoot
+						td.text-center(colspan="2") 
+							strong
+								| Promedio:
+						td.text-center
+							| Nota
+				
+		div.col-md-2
+
