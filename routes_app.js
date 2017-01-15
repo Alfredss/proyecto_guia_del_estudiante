@@ -4,6 +4,7 @@ var router = express.Router();
 var Usuario = require("./models/usuario.js").Usuario;
 var Curso = require("./models/curso.js").Curso;
 var Estudiante = require("./models/estudiante.js").Estudiante;
+var Estado = require("./models/estado.js").Estado;
 //app.use(express.static("public")); //habilitamos la carpeta public para que almacene recursos
 router.get("/", function(req, res) {
     Curso.find({}, {
@@ -13,10 +14,22 @@ router.get("/", function(req, res) {
         requisito: 1
     }, function(err, data) {
         console.log(req.session.user_id);
-        res.render("app/home", {
-            curso: data
+        Usuario.findById(req.session.user_id,
+            function(err, dato) {
+                Estado.find({idEstudiante:dato.codigo_estudiante},
+                    {
+                        _id:0,
+                        estado:1
+                    },
+                    function(err, d) {
+                        console.log(d);
+                        res.render("app/home", {
+                            curso: data,
+                            d:d
+                        });
+                    });
+            });
         });
-    });
 });
 router.get("/estadisticas", function(req, res) {
     Curso.find({
@@ -54,4 +67,9 @@ router.get("/configuracion", function(req, res) {
         });
     });
 });
+
+function subjects(c){
+    
+}
+
 module.exports = router;

@@ -158,6 +158,15 @@ var aprobado = " \'aprobado\' ";
 var ninguno = " \'ninguno\'";
 var noaprobado = " \'noaprobado\' ";
 
+var regNotas = [];
+regNotas = document.getElementById("ds").innerHTML;
+regNotas = regNotas.substring(1,regNotas.length-1);
+var arrayAprobados = regNotas.split("},{");
+alert(regNotas);
+for (var i = 0; i < arrayAprobados.length; i++) {
+    arrayAprobados[i] = arrayAprobados[i].substring(8,arrayAprobados[i].length);
+}
+
 var c = [];
 c = document.getElementById("cursos").innerHTML;
 
@@ -174,11 +183,11 @@ for (var i = 0; i < arreglo.length; i++) {
 for (var i = 0; i < arreglo.length; i++) {
     for (var j = 0; j < arreglo[i].length; j++) {
         if((i==0)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[0]==aprobado) {
                 bec141 = '';
                 bgec141 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[0]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bec141 = '#000000';
                 bgec141 = '#FFFFFF';
                 break;
@@ -190,11 +199,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==1)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[1]==aprobado) {
                 bec142 = '';
                 bgec142 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bec142 = '#000000';
                 bgec142 = '#FFFFFF';
                 break;
@@ -206,11 +215,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==2)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[2]==aprobado) {
                 bis141 = '';
                 bgis141 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[2]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis141 = '#000000';
                 bgis141 = '#FFFFFF';
                 break;
@@ -222,11 +231,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==3)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[3]==aprobado) {
                 bmd141 = '';
                 bgmd141 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[3]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bmd141 = '#000000';
                 bgmd141 = '#FFFFFF';
                 break;
@@ -238,11 +247,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==4)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[4]==aprobado) {
                 bma143 = '';
                 bgma143 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[4]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bma143 = '#000000';
                 bgma143 = '#FFFFFF';
                 break;
@@ -254,11 +263,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==5)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[5]==aprobado) {
                 ble141 = '';
                 bgle141 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[5]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 ble141 = '#000000';
                 bgle141 = '#FFFFFF';
                 break;
@@ -270,11 +279,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==6)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[6]==aprobado) {
                 bma141 = '';
                 bgma141 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[6]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bma141 = '#000000';
                 bgma141 = '#FFFFFF';
                 break;
@@ -286,11 +295,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==7)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[7]==aprobado) {
                 bcc121 = '';
                 bgcc121 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[7]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bcc121 = '#000000';
                 bgcc121 = '#FFFFFF';
                 break;
@@ -302,11 +311,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==8)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[8]==aprobado) {
                 bef122 = '';
                 bgef122 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[8]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bef122 = '#000000';
                 bgef122 = '#FFFFFF';
                 break;
@@ -318,11 +327,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==9)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[9]==aprobado) {
                 bis142 = '';
                 bgis142 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[9]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis142 = '#000000';
                 bgis142 = '#FFFFFF';
                 break;
@@ -334,11 +343,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==10)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[10]==aprobado) {
                 bma142 = '';
                 bgma142 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[10]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bma142 = '#000000';
                 bgma142 = '#FFFFFF';
                 break;
@@ -350,11 +359,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==11)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[11]==aprobado) {
                 bma144 = '';
                 bgma144 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[11]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bma144 = '#000000';
                 bgma144 = '#FFFFFF';
                 break;
@@ -366,11 +375,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==12)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[12]==aprobado) {
                 bfs142 = '';
                 bgfs142 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[12]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bfs142 = '#000000';
                 bgfs142 = '#FFFFFF';
                 break;
@@ -382,11 +391,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==13)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[13]==aprobado) {
                 bad142 = '';
                 bgad142 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[13]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bad142 = '#000000';
                 bgad142 = '#FFFFFF';
                 break;
@@ -398,11 +407,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==14)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[14]==aprobado) {
                 bac121 = '';
                 bgac121 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[14]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bac121 = '#000000';
                 bgac121 = '#FFFFFF';
                 break;
@@ -414,11 +423,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==15)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[15]==aprobado) {
                 bis241 = '';
                 bgis241 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[15]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis241 = '#000000';
                 bgis241 = '#FFFFFF';
                 break;
@@ -430,11 +439,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==16)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[16]==aprobado) {
                 bma241 = '';
                 bgma241 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[16]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bma241 = '#000000';
                 bgma241 = '#FFFFFF';
                 break;
@@ -446,11 +455,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==17)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[17]==aprobado) {
                 bma243 = '';
                 bgma243 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[17]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bma243 = '#000000';
                 bgma243 = '#FFFFFF';
                 break;
@@ -462,11 +471,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==18)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[18]==aprobado) {
                 bes241 = '';
                 bges241 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[18]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bes241 = '#000000';
                 bges241 = '#FFFFFF';
                 break;
@@ -478,11 +487,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==19)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[19]==aprobado) {
                 bfs241 = '';
                 bgfs241 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[19]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bfs241 = '#000000';
                 bgfs241 = '#FFFFFF';
                 break;
@@ -494,11 +503,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==20)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[20]==aprobado) {
                 bec241 = '';
                 bgec241 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[20]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bec241 = '#000000';
                 bgec241 = '#FFFFFF';
                 break;
@@ -510,11 +519,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==21)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[21]==aprobado) {
                 bis262 = '';
                 bgis262 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[21]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis262 = '#000000';
                 bgis262 = '#FFFFFF';
                 break;
@@ -526,11 +535,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==22)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[22]==aprobado) {
                 bis242 = '';
                 bgis242 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[22]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis242 = '#000000';
                 bgis242 = '#FFFFFF';
                 break;
@@ -542,11 +551,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==23)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[23]==aprobado) {
                 bes244 = '';
                 bges244 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[23]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bes244 = '#000000';
                 bges244 = '#FFFFFF';
                 break;
@@ -558,11 +567,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==24)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[24]==aprobado) {
                 bis244 = '';
                 bgis244 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[24]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis244 = '#000000';
                 bgis244 = '#FFFFFF';
                 break;
@@ -574,11 +583,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==25)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[25]==aprobado) {
                 bis246 = '';
                 bgis246 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[25]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis246 = '#000000';
                 bgis246 = '#FFFFFF';
                 break;
@@ -590,11 +599,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==26)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[26]==aprobado) {
                 bis248 = '';
                 bgis248 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[26]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis248 = '#000000';
                 bgis248 = '#FFFFFF';
                 break;
@@ -606,11 +615,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==27)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[27]==aprobado) {
                 bac222 = '';
                 bgac222 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[27]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bac222 = '#000000';
                 bgac222 = '#FFFFFF';
                 break;
@@ -622,11 +631,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==28)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[28]==aprobado) {
                 bco341 = '';
                 bgco341 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[28]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bco341 = '#000000';
                 bgco341 = '#FFFFFF';
                 break;
@@ -638,11 +647,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==29)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[29]==aprobado) {
                 bcs341 = '';
                 bgcs341 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[29]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bcs341 = '#000000';
                 bgcs341 = '#FFFFFF';
                 break;
@@ -654,11 +663,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==30)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[30]==aprobado) {
                 bis347 = '';
                 bgis347 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[30]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis347 = '#000000';
                 bgis347 = '#FFFFFF';
                 break;
@@ -670,11 +679,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==31)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[31]==aprobado) {
                 bis341 = '';
                 bgis341 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[31]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis341 = '#000000';
                 bgis341 = '#FFFFFF';
                 break;
@@ -686,11 +695,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==32)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[32]==aprobado) {
                 bis343 = '';
                 bgis343 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[32]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis343 = '#000000';
                 bgis343 = '#FFFFFF';
                 break;
@@ -702,11 +711,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==33)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[33]==aprobado) {
                 bis345 = '';
                 bgis345 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[33]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis345 = '#000000';
                 bgis345 = '#FFFFFF';
                 break;
@@ -718,11 +727,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==34)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[34]==aprobado) {
                 bcs321 = '';
                 bgcs321 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[34]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bcs321 = '#000000';
                 bgcs321 = '#FFFFFF';
                 break;
@@ -734,11 +743,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==35)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[35]==aprobado) {
                 bis342 = '';
                 bgis342 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[35]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis342 = '#000000';
                 bgis342 = '#FFFFFF';
                 break;
@@ -750,11 +759,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==36)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[36]==aprobado) {
                 bco342 = '';
                 bgco342 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[36]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bco342 = '#000000';
                 bgco342 = '#FFFFFF';
                 break;
@@ -766,11 +775,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==37)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[37]==aprobado) {
                 bis344 = '';
                 bgis344 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[37]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis344 = '#000000';
                 bgis344 = '#FFFFFF';
                 break;
@@ -782,11 +791,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==38)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[38]==aprobado) {
                 bis346 = '';
                 bgis346 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[38]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis346 = '#000000';
                 bgis346 = '#FFFFFF';
                 break;
@@ -798,11 +807,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==39)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[39]==aprobado) {
                 bis348 = '';
                 bgis348 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[39]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis348 = '#000000';
                 bgis348 = '#FFFFFF';
                 break;
@@ -814,11 +823,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==40)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[40]==aprobado) {
                 bis362 = '';
                 bgis362 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[40]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis362 = '#000000';
                 bgis362 = '#FFFFFF';
                 break;
@@ -830,11 +839,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==41)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[41]==aprobado) {
                 bec441 = '';
                 bgec441 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[41]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bec441 = '#000000';
                 bgec441 = '#FFFFFF';
                 break;
@@ -846,11 +855,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==42)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[42]==aprobado) {
                 bad441 = '';
                 bgad441 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[42]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bad441 = '#000000';
                 bgad441 = '#FFFFFF';
                 break;
@@ -862,11 +871,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==43)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[43]==aprobado) {
                 bis441 = '';
                 bgis441 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[43]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis441 = '#000000';
                 bgis441 = '#FFFFFF';
                 break;
@@ -878,11 +887,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==44)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[44]==aprobado) {
                 bis443 = '';
                 bgis443 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[44]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis443 = '#000000';
                 bgis443 = '#FFFFFF';
                 break;
@@ -894,11 +903,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==45)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[45]==aprobado) {
                 bis445 = '';
                 bgis445 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[45]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis445 = '#000000';
                 bgis445 = '#FFFFFF';
                 break;
@@ -910,11 +919,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==46)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[46]==aprobado) {
                 bis451 = '';
                 bgis451 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[46]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis451 = '#000000';
                 bgis451 = '#FFFFFF';
                 break;
@@ -926,11 +935,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==47)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[47]==aprobado) {
                 bis453 = '';
                 bgis453 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[47]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis453 = '#000000';
                 bgis453 = '#FFFFFF';
                 break;
@@ -942,11 +951,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==48)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[48]==aprobado) {
                 bad451 = '';
                 bgad451 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[48]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bad451 = '#000000';
                 bgad451 = '#FFFFFF';
                 break;
@@ -958,11 +967,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==49)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[49]==aprobado) {
                 bis442 = '';
                 bgis442 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[49]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis442 = '#000000';
                 bgis442 = '#FFFFFF';
                 break;
@@ -974,11 +983,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==50)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[50]==aprobado) {
                 bad442 = '';
                 bgad442 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[50]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bad442 = '#000000';
                 bgad442 = '#FFFFFF';
                 break;
@@ -990,11 +999,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==51)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[51]==aprobado) {
                 bis444 = '';
                 bgis444 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[51]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis444 = '#000000';
                 bgis444 = '#FFFFFF';
                 break;
@@ -1006,11 +1015,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==52)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[52]==aprobado) {
                 bis446 = '';
                 bgis446 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[52]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis446 = '#000000';
                 bgis446 = '#FFFFFF';
                 break;
@@ -1022,11 +1031,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==53)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[53]==aprobado) {
                 bad444 = '';
                 bgad444 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[53]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bad444 = '#000000';
                 bgad444 = '#FFFFFF';
                 break;
@@ -1038,11 +1047,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==54)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[54]==aprobado) {
                 bis452 = '';
                 bgis452 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[54]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis452 = '#000000';
                 bgis452 = '#FFFFFF';
                 break;
@@ -1054,11 +1063,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==55)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[55]==aprobado) {
                 bis454 = '';
                 bgis454 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[55]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis454 = '#000000';
                 bgis454 = '#FFFFFF';
                 break;
@@ -1070,11 +1079,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==56)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[56]==aprobado) {
                 bad452 = '';
                 bgad452 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[56]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bad452 = '#000000';
                 bgad452 = '#FFFFFF';
                 break;
@@ -1086,11 +1095,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==57)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[57]==aprobado) {
                 bis541 = '';
                 bgis541 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[57]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis541 = '#000000';
                 bgis541 = '#FFFFFF';
                 break;
@@ -1102,11 +1111,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==58)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[58]==aprobado) {
                 bad551 = '';
                 bgad551 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[58]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bad551 = '#000000';
                 bgad551 = '#FFFFFF';
                 break;
@@ -1118,11 +1127,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==59)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[59]==aprobado) {
                 bad541 = '';
                 bgad541 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[59]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bad541 = '#000000';
                 bgad541 = '#FFFFFF';
                 break;
@@ -1134,11 +1143,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==60)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[60]==aprobado) {
                 bis543 = '';
                 bgis543 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[60]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis543 = '#000000';
                 bgis543 = '#FFFFFF';
                 break;
@@ -1150,11 +1159,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==61)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[61]==aprobado) {
                 bis545 = '';
                 bgis545 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[61]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis545 = '#000000';
                 bgis545 = '#FFFFFF';
                 break;
@@ -1166,11 +1175,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==62)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[62]==aprobado) {
                 bis547 = '';
                 bgis547 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[62]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis547 = '#000000';
                 bgis547 = '#FFFFFF';
                 break;
@@ -1182,11 +1191,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==63)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[63]==aprobado) {
                 bis551 = '';
                 bgis551 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[63]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis551 = '#000000';
                 bgis551 = '#FFFFFF';
                 break;
@@ -1198,11 +1207,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==64)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[64]==aprobado) {
                 bis553 = '';
                 bgis553 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[64]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis553 = '#000000';
                 bgis553 = '#FFFFFF';
                 break;
@@ -1214,11 +1223,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==65)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[65]==aprobado) {
                 bis548 = '';
                 bgis548 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[65]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis548 = '#000000';
                 bgis548 = '#FFFFFF';
                 break;
@@ -1230,11 +1239,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==66)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[66]==aprobado) {
                 bis542 = '';
                 bgis542 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[66]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis542 = '#000000';
                 bgis542 = '#FFFFFF';
                 break;
@@ -1246,11 +1255,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==67)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[67]==aprobado) {
                 bde542 = '';
                 bgde542 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[67]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bde542 = '#000000';
                 bgde542 = '#FFFFFF';
                 break;
@@ -1262,11 +1271,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==68)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[68]==aprobado) {
                 bis544 = '';
                 bgis544 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[68]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis544 = '#000000';
                 bgis544 = '#FFFFFF';
                 break;
@@ -1277,11 +1286,11 @@ for (var i = 0; i < arreglo.length; i++) {
             }
         }
         if((i==69)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[69]==aprobado) {
                 bis546 = '';
                 bgis546 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[69]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis546 = '#000000';
                 bgis546 = '#FFFFFF';
                 break;
@@ -1292,11 +1301,11 @@ for (var i = 0; i < arreglo.length; i++) {
             }
         }
         if((i==70)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[70]==aprobado) {
                 bis552 = '';
                 bgis552 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[70]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis552 = '#000000';
                 bgis552 = '#FFFFFF';
                 break;
@@ -1308,11 +1317,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==71)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[71]==aprobado) {
                 bis554 = '';
                 bgis554 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[71]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bis554 = '#000000';
                 bgis554 = '#FFFFFF';
                 break;
@@ -1324,11 +1333,11 @@ for (var i = 0; i < arreglo.length; i++) {
         }
 
         if((i==72)&&(j==4)){
-            if (arreglo[i][j][1]==aprobado) {
+            if (arrayAprobados[72]==aprobado) {
                 bad552 = '';
                 bgad552 = '';
                 break;
-            }else if((arreglo[i][j][1]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
+            }else if((arrayAprobados[72]==noaprobado)&&(arreglo[i][3][1]==ninguno)){
                 bad552 = '#000000';
                 bgad552 = '#FFFFFF';
                 break;
