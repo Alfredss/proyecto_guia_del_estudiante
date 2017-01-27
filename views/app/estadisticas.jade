@@ -3,13 +3,21 @@ block encabezado
 	h2.text-center(style='color:white;')
 		| RECORD DE PROMEDIO DE NOTAS
 	br
+
 	div.row
 		div.col-md-2
+			
 		div.col-md-8
+			p#serie(hidden="true") #{serie}
+			p#curso(hidden="true") #{curso}
 			script(src='../js/Chart.js')
 			#canvas-holder
 				canvas#chart-area1(height='300', width='600')
 			script.
+				var a = document.getElementById("serie").innerHTML;
+				var b = document.getElementById("curso").innerHTML;
+				alert(a.length);
+				alert(b.length);
 				var lineChartData = {
 				labels : ["100-I","100-II","200-I","200-II","300-I","300-II","400-I","400-II","500-I","500-II"],
 				datasets : [
@@ -31,6 +39,7 @@ block encabezado
 		div.col-md-2
 	div.row
 		div.col-md-2
+			
 		div.col-md-8
 			h3.text-center(style='color:white;')
 				| Registro de Notas
@@ -101,11 +110,11 @@ block encabezado
 						function myCreateFunction() {
 							var table = document.getElementById("miTabla");
 							var i = table.rows.length;
-							var row = table.insertRow(i-1);
+							var row = table.insertRow(i-2);
 							var cell1 = row.insertCell(0);
 							var cell2 = row.insertCell(1);
 							var cell3 = row.insertCell(2);
-							var cell4 = row.insertCell(3);
+							
 							cell1.innerHTML = array[centinel][0];
 							cell2.innerHTML = array[centinel][1];
 							centinel++;
@@ -117,46 +126,50 @@ block encabezado
 						}
 
 						$('#miTabla tr').find('td:eq(2)').each(function(){
-							$(this).html('<input id="nota" class="form-control center-block" type="number"/>');
+							$(this).html('<input id="nota" class="form-control center-block" type="number" name="nota" form="form_nota"/>');
 						});
 
-						$('#miTabla tr').find('td:eq(3)').each(function(){
-							$(this).html('<button id= "boton" class="form-control center-block" onclick="myDeleteFunction()"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></button>');
-						});
-						
+						//- $('#miTabla tr').find('td:eq(3)').each(function(){
+						//- 	$(this).html('<button id= "boton" class="form-control center-block" onclick="myDeleteFunction()"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></button>');
+						//- });
+
 						$('thead').find('td:eq(2)').html("<strong>Nota</strong>");
-						$('thead').find('td:eq(3)').html("<strong>Almacenar</strong>");
-
+						//- $('thead').find('td:eq(3)').html("<strong>Almacenar</strong>");
+						$('tfoot').find('td:eq(2)').html("<strong></strong>");
+						//- $('td').attr('colspan',2);
 						function myDeleteFunction() {
 							var table = document.getElementById("miTabla");
 							var i = table.rows.length;
 							table.deleteRow(i-2);
 						}
 
-						$('#boton').click(function(){
+						$('#nota').click(function(){
 							 myDeleteFunction();
 						});
 					});
+				fom(action="#", method="post", id="form_nota")
 				table#miTabla.table
+
 					thead
-						td.text-center
-							strong
-								| Nombre Curso
-						td.text-center
-							strong
-								| Creditos
-						td.text-center
-							| Nota
-						td.text-center
-							| Save
+						tr
+							td.text-center
+								strong
+									| Nombre Curso
+							td.text-center
+								strong
+									| Creditos
+							td.text-center
+								| Nota
+
 					tbody
-						
+						tr
+					
 					tfoot
-						td.text-center(colspan="2") 
-							strong
-								| Promedio:
-						td.text-center
-							| Nota
-				
+						tr
+							td.text-center
+								input.btn.btn-success(type="submit", value="Guardar", form="form_nota")
+							td.text-center
+								| Nota
+							td
 		div.col-md-2
 

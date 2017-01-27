@@ -8,6 +8,7 @@ html(lang='en')
     link(rel='stylesheet', href='css/main.css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
     link(rel='stylesheet', href='librerias/dist/vis.css')
+    link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Libre+Baskerville")
     script(type='text/javascript', src='librerias/dist/vis.js')
     link(href='librerias/dist/vis-network.min.css', rel='stylesheet', type='text/css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
@@ -65,10 +66,10 @@ html(lang='en')
               button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
                 span.glyphicon.glyphicon-cog(aria-hidden='true')
               ul.dropdown-menu
+                li.text-center(style="background-color:#A9F5A9")
+                  strong.text-center
+                    a(href='#') #{nombre}
                 li
-                  a(href='#') Tu Nombre
-                li
-                  hr
                   a(href='app/configuracion') Configuracion
                 li
                   a(href='/') Salir
@@ -168,12 +169,40 @@ html(lang='en')
           #ma143.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Calculo I
-                .modal-body
-                  p Cálculo I
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Calculo I
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td MA 143
+                    tr
+                      td Creditos
+                      td 5.0
+                    tr
+                      td Horas Teoria
+                      td 4
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 6
+                    tr
+                      td Requisito
+                      td Ninguno
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS141
           button#btnIs141.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is141', style='background: transparent; border: none !important; font-size:0;')
@@ -181,12 +210,40 @@ html(lang='en')
           #is141.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Algoritmos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Algoritmos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 141
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 3
+                    tr
+                      td Horas Practica
+                      td 1
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 6
+                    tr
+                      td Requisito
+                      td Ninguno
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // LE141
           button#btnLe141.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#le141', style='background: transparent; border: none !important; font-size:0;')
@@ -194,12 +251,41 @@ html(lang='en')
           #le141.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Comunicación Oral y Escrita
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Comunicacion Oral y Escrita
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td LE 141
+                    tr
+                      td Creditos
+                      td 2.0
+                    tr
+                      td Horas Teoria
+                      td 1
+                    tr
+                      td Horas Practica
+                      td 3
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td Ninguno
+                    tr
+                      td Departamento 
+                      td Lenguas y Literatura
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
+
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // EC141
           button#btnEc141.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ec141', style='background: transparent; border: none !important; font-size:0;')
@@ -207,12 +293,41 @@ html(lang='en')
           #ec141.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Economía
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Economia
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td EC 141
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td Ninguno
+                    tr
+                      td Departamento 
+                      td Ciencias Economicas y Administrativas
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
+
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // MA141
           button#btnMa141.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ma141', style='background: transparent; border: none !important; font-size:0;')
@@ -220,12 +335,40 @@ html(lang='en')
           #ma141.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Matemática Básica
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Matematica Basica
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td MA 141
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td Ninguno
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // MD141
           button#btnMd141.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#md141', style='background: transparent; border: none !important; font-size:0;')
@@ -233,25 +376,81 @@ html(lang='en')
           #md141.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Método del Estudio Universitario
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Metodo del Estudio Universitario
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td MD 141
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td Ninguno
+                    tr
+                      td Departamento 
+                      td Ciencias Humanas
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
-          // CC121
-          button#btnCc121.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#cc141', style='background: transparent; border: none !important; font-size:0;')
+          // CC141
+          button#btnCc121.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#cc121', style='background: transparent; border: none !important; font-size:0;')
           // Modal
-          #cc141.modal.fade(role='dialog')
+          #cc121.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Computación Básica
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Computación Básica
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td CC 121
+                    tr
+                      td Creditos
+                      td 2.0
+                    tr
+                      td Horas Teoria
+                      td 1
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 3
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // EF122
           button#btnEf122.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ef122', style='background: transparent; border: none !important; font-size:0;')
@@ -259,12 +458,40 @@ html(lang='en')
           #ef122.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Deportes Menores
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Deportes Menores
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td EF 122
+                    tr
+                      td Creditos
+                      td 2.0
+                    tr
+                      td Horas Teoria
+                      td 1
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 3
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FECH
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // 100 II
           // AC121
@@ -273,12 +500,40 @@ html(lang='en')
           #ac121.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Folklore
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Folklore
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td AC 121
+                    tr
+                      td Creditos
+                      td 2.0
+                    tr
+                      td Horas Teoria
+                      td 1
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 3
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FECH
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // MA142
           button#btnMa142.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ma142', style='background: transparent; border: none !important; font-size:0;')
@@ -286,12 +541,40 @@ html(lang='en')
           #ma142.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Matemática Discreta
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Matematica Discreta
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td MA 142
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td MA 141
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // AD142
           button#btnAd142.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ad142', style='background: transparent; border: none !important; font-size:0;')
@@ -299,12 +582,40 @@ html(lang='en')
           #ad142.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Administración General
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Administracion General
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td AD 142
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td Ninguno
+                    tr
+                      td Departamento 
+                      td Ciencias Economicas y Administrativas
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS142
           button#btnIs142.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is142', style='background: transparent; border: none !important; font-size:0;')
@@ -312,12 +623,40 @@ html(lang='en')
           #is142.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Programación Orientada a Objetos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Programacion Orientada a Objetos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 142
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 3
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 3
+                    tr
+                      td Horas Totales
+                      td 6
+                    tr
+                      td Requisito
+                      td IS 141
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // EC142
           button#btnEc142.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ec142', style='background: transparent; border: none !important; font-size:0;')
@@ -325,12 +664,40 @@ html(lang='en')
           #ec142.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Microeconomía
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Microeconomia
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td EC 142
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td EC 141
+                    tr
+                      td Departamento 
+                      td Ciencias Economicas y Administrativas
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // FS142
           button#btnFs142.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#fs142', style='background: transparent; border: none !important; font-size:0;')
@@ -338,12 +705,40 @@ html(lang='en')
           #fs142.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Física I
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Fisica I
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td FS 142
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 6
+                    tr
+                      td Requisito
+                      td MA 143
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // MA144
           button#btnMa144.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ma144', style='background: transparent; border: none !important; font-size:0;')
@@ -351,12 +746,40 @@ html(lang='en')
           #ma144.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Cálculo II
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Calculo II
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td MA 144
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 3
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 5
+                    tr
+                      td Requisito
+                      td MA 143
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // 200 I
           // FS241
@@ -365,12 +788,41 @@ html(lang='en')
           #fs241.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Física II
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Fisica II
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td FS 241
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 6
+                    tr
+                      td Requisito
+                      td FS 142
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
+
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // MA241
           button#btnMa241.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ma241', style='background: transparent; border: none !important; font-size:0;')
@@ -378,12 +830,40 @@ html(lang='en')
           #ma241.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Álgebra Lineal
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Algebra Lineal
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td MA 241
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td MA 141
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS241
           button#btnIs241.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is241', style='background: transparent; border: none !important; font-size:0;')
@@ -391,12 +871,40 @@ html(lang='en')
           #is241.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Estructura de Datos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Estructura de Datos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 241
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 3
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 3
+                    tr
+                      td Horas Totales
+                      td 6
+                    tr
+                      td Requisito
+                      td IS 142
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // EC241
           button#btnEc241.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ec241', style='background: transparent; border: none !important; font-size:0;')
@@ -404,12 +912,40 @@ html(lang='en')
           #ec241.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Macroeconomía
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Macroeconomia
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td EC 241
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td EC 142
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // ES241
           button#btnEs241.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#es241', style='background: transparent; border: none !important; font-size:0;')
@@ -417,12 +953,40 @@ html(lang='en')
           #es241.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Estadística I
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Estadistica I
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td ES 241
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 3
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 5
+                    tr
+                      td Requisito
+                      td MA 144
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // MA243
           button#btnMa243.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ma243', style='background: transparent; border: none !important; font-size:0;')
@@ -430,12 +994,40 @@ html(lang='en')
           #ma243.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Cálculo III
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Calculo III
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td MA 243
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 3
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 5
+                    tr
+                      td Requisito
+                      td MA 144
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // 200 II
           // IS244
@@ -444,12 +1036,40 @@ html(lang='en')
           #is244.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Sistemas Eléctricos y Electrónicos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Sistemas Electricos y Electronicos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 244
+                    tr
+                      td Creditos
+                      td 5.0
+                    tr
+                      td Horas Teoria
+                      td 4
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 6
+                    tr
+                      td Requisito
+                      td FS 241
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS262
           button#btnIs262.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is262', style='background: transparent; border: none !important; font-size:0;')
@@ -457,12 +1077,40 @@ html(lang='en')
           #is262.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Investigación de Operaciones
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Investigacion de Operaciones I
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 262
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 3
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 5
+                    tr
+                      td Requisito
+                      td MA 241 
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS248
           button#btnIs248.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is248', style='background: transparent; border: none !important; font-size:0;')
@@ -470,12 +1118,40 @@ html(lang='en')
           #is248.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Organización y Métodos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Organización y Métodos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 246
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio- ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS246
           button#btnIs246.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is246', style='background: transparent; border: none !important; font-size:0;')
@@ -496,12 +1172,40 @@ html(lang='en')
           #ac222.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Arte Musical y Teatral
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Arte Musical y Teatral
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td AC 222
+                    tr
+                      td Creditos
+                      td 2.0
+                    tr
+                      td Horas Teoria
+                      td 1
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 3
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FECH
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS242
           button#btnIs242.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is242', style='background: transparent; border: none !important; font-size:0;')
@@ -509,12 +1213,40 @@ html(lang='en')
           #is242.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Métodos Numéricos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Métodos Numéricos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 242
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 3
+                    tr
+                      td Horas Totales
+                      td 5
+                    tr
+                      td Requisito
+                      td MA 243
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // 300 I
           // IS343
@@ -523,12 +1255,40 @@ html(lang='en')
           #is343.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Metodología de Sistemas Blandos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Metodología de Sistemas Blandos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 343
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 3
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 5
+                    tr
+                      td Requisito
+                      td IS 246
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS341
           button#btnIs341.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is341', style='background: transparent; border: none !important; font-size:0;')
@@ -536,12 +1296,41 @@ html(lang='en')
           #is341.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Sistemas Digitales y Arquitectura de Computadoras
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Sistemas Digitales y Arquitectura de Computadoras
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 341
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 4
+                    tr
+                      td Horas Totales
+                      td 6
+                    tr
+                      td Requisito
+                      td IS 244
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
+
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS347
           button#btnIs347.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is347', style='background: transparent; border: none !important; font-size:0;')
@@ -549,12 +1338,40 @@ html(lang='en')
           #is347.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Investigación de Operaciones II
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Investigación de Operaciones II
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 347
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 3
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 5
+                    tr
+                      td Requisito
+                      td IS 262
+                    tr
+                      td Departamento 
+                      td FISMA  
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS345
           button#btnIs345.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is345', style='background: transparent; border: none !important; font-size:0;')
@@ -562,12 +1379,41 @@ html(lang='en')
           #is345.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Planeamiento de Sistemas de Información
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Planeamiento de Sistemas de Información
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 345
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 3
+                    tr
+                      td Horas Practica
+                      td 3
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 6
+                    tr
+                      td Requisito
+                      td IS 246-IS248
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
+
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // CS321
           button#btnCs321.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#cs321', style='background: transparent; border: none !important; font-size:0;')
@@ -575,12 +1421,40 @@ html(lang='en')
           #cs321.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Realidad Nacional
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Realidad Nacional
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td CS 321
+                    tr
+                      td Creditos
+                      td 2.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 2
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FECH
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // CS341
           button#btnCs341.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#cs341', style='background: transparent; border: none !important; font-size:0;')
@@ -588,12 +1462,40 @@ html(lang='en')
           #cs341.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Liderazgo
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Liderazgo
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td CS 341
+                    tr
+                      td Creditos
+                      td 2.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 2
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td Ciencias Sociales
+                    tr
+                      td Caracteristica 
+                      td Obligatorio-ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // CO341
           button#btnCo341.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#co341', style='background: transparent; border: none !important; font-size:0;')
@@ -601,12 +1503,40 @@ html(lang='en')
           #co341.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Contabilidad General
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Contabilidad General
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td CO 341
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FCEAC  
+                    tr
+                      td Caracteristica 
+                      td Obligatorio- ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // 300 II
           // IS344
@@ -615,12 +1545,40 @@ html(lang='en')
           #is344.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Sistemas Operativos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Sistemas Operativos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 344
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td IS 341
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS342
           button#btnIs342.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is342', style='background: transparent; border: none !important; font-size:0;')
@@ -628,12 +1586,40 @@ html(lang='en')
           #is342.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Teoría de Decisiones
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Teoría de Decisiones
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 342
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td IS 347
+                    tr
+                      td Departamento 
+                      td FCEAC
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS348
           button#btnIs348.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is348', style='background: transparent; border: none !important; font-size:0;')
@@ -641,12 +1627,40 @@ html(lang='en')
           #is348.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Modelamiento de Datos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Modelamiento de Datos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 348
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 6
+                    tr
+                      td Requisito
+                      td IS 345
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS346
           button#btnIs346.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is346', style='background: transparent; border: none !important; font-size:0;')
@@ -654,12 +1668,40 @@ html(lang='en')
           #is346.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Sistemas Dinámicos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Sistemas Dinámicos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 346
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 3
+                    tr
+                      td Horas Totales
+                      td 5
+                    tr
+                      td Requisito
+                      td IS 343
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS362
           button#btnIs362.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is362', style='background: transparent; border: none !important; font-size:0;')
@@ -667,12 +1709,40 @@ html(lang='en')
           #is362.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Sistemas de Información I
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Sistemas de Información I
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 362
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 3
+                    tr
+                      td Horas Practica
+                      td 3
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 6
+                    tr
+                      td Requisito
+                      td IS 345
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // CO342
           button#btnCo342.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#co342', style='background: transparent; border: none !important; font-size:0;')
@@ -680,12 +1750,40 @@ html(lang='en')
           #co342.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Sistema de Costos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Sistema de Costos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td CO 342
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td CO 341
+                    tr
+                      td Departamento 
+                      td FCEAC
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // 400 I
           // IN441
@@ -707,12 +1805,40 @@ html(lang='en')
           #is441.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Redes de Computadoras
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Redes de Computadoras
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 441
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 3
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 3
+                    tr
+                      td Horas Totales
+                      td 6
+                    tr
+                      td Requisito
+                      td IS 344
+                    tr
+                      td Departamento 
+                      td fISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // AD441
           button#btnAd441.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ad441', style='background: transparent; border: none !important; font-size:0;')
@@ -720,12 +1846,40 @@ html(lang='en')
           #ad441.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Logística
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Logística
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td AD 441
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td IS 347
+                    tr
+                      td Departamento 
+                      td FCEAC
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS443
           button#btnIs443.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is443', style='background: transparent; border: none !important; font-size:0;')
@@ -733,12 +1887,40 @@ html(lang='en')
           #is443.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Administración de Base de Datos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Administración de Bases de Datos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 443
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 3
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 5
+                    tr
+                      td Requisito
+                      td IS 348
+                    tr
+                      td Departamento 
+                      td fISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS445
           button#btnIs445.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is445', style='background: transparent; border: none !important; font-size:0;')
@@ -746,12 +1928,40 @@ html(lang='en')
           #is445.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Sistemas de Información II
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Sistemas de Información II
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 445
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td IS 362-IS 348
+                    tr
+                      td Departamento 
+                      td fISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS451
           button#btnIs451.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is451', style='background: transparent; border: none !important; font-size:0;')
@@ -759,12 +1969,40 @@ html(lang='en')
           #is451.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Ingeniería de la Información
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Ingeniería de la Información
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 451
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td IS 362
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // EC441
           button#btnEc441.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ec441', style='background: transparent; border: none !important; font-size:0;')
@@ -772,12 +2010,40 @@ html(lang='en')
           #ec441.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Ingeniería Económica
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Ingeniería Económica
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td EC 441
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td CO 342
+                    tr
+                      td Departamento 
+                      td FCEAC
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // AD451
           button#btnAd451.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ad451', style='background: transparent; border: none !important; font-size:0;')
@@ -785,12 +2051,40 @@ html(lang='en')
           #ad451.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Ingeniería de Software
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Creatividad Empresarial
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td AD 451
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td Más de 100 créditos
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS453
           button#btnIs453.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is453', style='background: transparent; border: none !important; font-size:0;')
@@ -798,12 +2092,40 @@ html(lang='en')
           #is453.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Creatividad Empresarial
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Ingeniería de Software
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 453
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td Más de100 créditos
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // 400 II
           // IN442
@@ -825,12 +2147,40 @@ html(lang='en')
           #is444.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Seguridad Informática
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Seguridad Informática
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 444
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td IS 441
+                    tr
+                      td Departamento 
+                      td fISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS454
           button#btnIs454.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is454', style='background: transparent; border: none !important; font-size:0;')
@@ -838,12 +2188,40 @@ html(lang='en')
           #is454.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Desarrollo Web
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Desarrollo Web
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 454
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE-ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS442
           button#btnIs442.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is442', style='background: transparent; border: none !important; font-size:0;')
@@ -851,12 +2229,40 @@ html(lang='en')
           #is442.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Sistemas Expertos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Sistemas Expertos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 442
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 3
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 5
+                    tr
+                      td Requisito
+                      td MA 142
+                    tr
+                      td Departamento 
+                      td fISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio- ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // AD444
           button#btnAd444.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ad444', style='background: transparent; border: none !important; font-size:0;')
@@ -864,12 +2270,40 @@ html(lang='en')
           #ad444.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Gestión de Recursos Humanos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Gestión de Recursos Humanos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td AD 444
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td IS 248
+                    tr
+                      td Departamento 
+                      td fISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio-ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS446
           button#btnIs446.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is446', style='background: transparent; border: none !important; font-size:0;')
@@ -877,12 +2311,40 @@ html(lang='en')
           #is446.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Sistemas de Información Gerencial
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Sistemas de Información Gerencial
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 446
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td IS 445-IS 443
+                    tr
+                      td Departamento 
+                      td fISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // AD452
           button#btnAd452.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ad452', style='background: transparent; border: none !important; font-size:0;')
@@ -890,12 +2352,40 @@ html(lang='en')
           #ad452.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Seminario de Empresas
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Seminario de Empresas
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td AD 454
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FCEAC
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE-ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS452
           button#btnIs452.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is452', style='background: transparent; border: none !important; font-size:0;')
@@ -903,12 +2393,40 @@ html(lang='en')
           #is452.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Calidad Total
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Calidad Total
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 452
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE-ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // AD442
           button#btnAd442.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ad442', style='background: transparent; border: none !important; font-size:0;')
@@ -916,12 +2434,40 @@ html(lang='en')
           #ad442.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Gestión Financiera
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Gestión Financiera
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td AD 442
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td EC 441
+                    tr
+                      td Departamento 
+                      td FCEAC
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // 500 I
           // IS545
@@ -930,12 +2476,40 @@ html(lang='en')
           #is545.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Comercio Electrónico
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Comercio Electrónico
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 545
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td IS 444
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS551
           button#btnIs551.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is551', style='background: transparent; border: none !important; font-size:0;')
@@ -943,12 +2517,40 @@ html(lang='en')
           #is551.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Reingeniería de Procesos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Reingeniería de Procesos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 551
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE-ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS541
           button#btnIs541.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is541', style='background: transparent; border: none !important; font-size:0;')
@@ -956,12 +2558,40 @@ html(lang='en')
           #is541.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Control y Automatización de Procesos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Control y Automatización de Procesos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 541
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td IS 442
+                    tr
+                      td Departamento 
+                      td fISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS543
           button#btnIs543.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is543', style='background: transparent; border: none !important; font-size:0;')
@@ -969,12 +2599,40 @@ html(lang='en')
           #is543.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Seminario de Tesis I
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Seminario de Tesis I
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 543
+                    tr
+                      td Creditos
+                      td 4.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 4
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 6
+                    tr
+                      td Requisito
+                      td MAS DE 160 CREDITOS
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS547
           button#btnIs547.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is547', style='background: transparent; border: none !important; font-size:0;')
@@ -982,12 +2640,40 @@ html(lang='en')
           #is547.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Auditoría de Sistemas
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Auditoría de Sistemas
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 547
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 3
+                    tr
+                      td Horas Totales
+                      td 5
+                    tr
+                      td Requisito
+                      td IS 446
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS553
           button#btnIs553.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is553', style='background: transparent; border: none !important; font-size:0;')
@@ -995,12 +2681,41 @@ html(lang='en')
           #is553.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Sistemas Distribuidos
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Sistemas Distribuidos
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 553
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE-ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
+
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // AD551
           button#btnAd551.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ad551', style='background: transparent; border: none !important; font-size:0;')
@@ -1008,12 +2723,40 @@ html(lang='en')
           #ad551.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Mercadotecnia
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Mercadotecnia
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td AD 551
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FCEAC
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE-ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IN541
           button#btnIn541.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#in541', style='background: transparent; border: none !important; font-size:0;')
@@ -1034,12 +2777,40 @@ html(lang='en')
           #ad541.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Proyectos de Inversión
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Proyectos de Inversión
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td AD 541
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td AD 442
+                    tr
+                      td Departamento 
+                      td FCEAC
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // 500 II
           // IS546
@@ -1048,12 +2819,40 @@ html(lang='en')
           #is546.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Prácticas Pre-Profesionales
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Prácticas Pre-Profesionales
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 546
+                    tr
+                      td Creditos
+                      td 5.0
+                    tr
+                      td Horas Teoria
+                      td 0
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 0
+                    tr
+                      td Requisito
+                      td MAS DE 160 CREDITOS
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // DE542
           button#btnDe542.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#de542', style='background: transparent; border: none !important; font-size:0;')
@@ -1061,12 +2860,40 @@ html(lang='en')
           #de542.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Legislación
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Legislación
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td DE 542
+                    tr
+                      td Creditos
+                      td 2.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 2
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FCP
+                    tr
+                      td Caracteristica 
+                      td Obligatorio-ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // AD552
           button#btnAd552.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#ad552', style='background: transparent; border: none !important; font-size:0;')
@@ -1074,12 +2901,40 @@ html(lang='en')
           #ad552.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Gestión de Empresas
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Gestión de Empresas
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td AD 552
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE-ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS542
           button#btnIs542.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is542', style='background: transparent; border: none !important; font-size:0;')
@@ -1087,12 +2942,40 @@ html(lang='en')
           #is542.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Seminario de Tesis II
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Seminario de Tesis II
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 542
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 3
+                    tr
+                      td Horas Totales
+                      td 5
+                    tr
+                      td Requisito
+                      td IS 543
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS544
           button#btnIs544.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is544', style='background: transparent; border: none !important; font-size:0;')
@@ -1100,12 +2983,40 @@ html(lang='en')
           #is544.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Taller de Ingeniería de Sistemas
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Taller de Ingeniería de Sistemas
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 544
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 3
+                    tr
+                      td Horas Totales
+                      td 5
+                    tr
+                      td Requisito
+                      td IS 446
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS554
           button#btnIs554.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is554', style='background: transparent; border: none !important; font-size:0;')
@@ -1113,12 +3024,40 @@ html(lang='en')
           #is554.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Gestión de Centros de Información
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Gestión de Centros de Información
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 554
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE-ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IS552
           button#btnIs552.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#is552', style='background: transparent; border: none !important; font-size:0;')
@@ -1126,12 +3065,40 @@ html(lang='en')
           #is552.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Soporte para la Toma de Decisiones
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Soporte para la Toma de Decisiones
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 552
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 0
+                    tr
+                      td Horas Laboratorio
+                      td 2
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td NINGUNO
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td UNO POR SEMESTRE-ADELANTABLE
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
           // IN542
           button#btnIn542.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#in542', style='background: transparent; border: none !important; font-size:0;')
@@ -1152,12 +3119,40 @@ html(lang='en')
           #is548.modal.fade(role='dialog')
             .modal-dialog.modal-sm
               .modal-content
-                .modal-header
+                .modal-header(style="background-color:#A9F5A9")
                   button.close(type='button', data-dismiss='modal') ×
-                  h4.modal-title Planeamiento Estratégico de Negocios
-                .modal-body
-                  p
-                .modal-footer
+                  h4#titulo-curso.modal-title.text-center Planeamiento Estratégico de Negocios
+                .modal-body(style="background-color:#E0F8E0")
+                  table(class="table", border="2px solid", border-color="#A9F5A9" style="background-color:#CEF6EC")
+                    tr
+                      td Sigla
+                      td IS 548
+                    tr
+                      td Creditos
+                      td 3.0
+                    tr
+                      td Horas Teoria
+                      td 2
+                    tr
+                      td Horas Practica
+                      td 2
+                    tr
+                      td Horas Laboratorio
+                      td 0
+                    tr
+                      td Horas Totales
+                      td 4
+                    tr
+                      td Requisito
+                      td AD 541
+                    tr
+                      td Departamento 
+                      td FISMA
+                    tr
+                      td Caracteristica 
+                      td Obligatorio
+                  
+                .modal-footer(style="background-color:#E3F6CE")
                   button.btn.btn-default(type='button', data-dismiss='modal') Close
         // PROGRESO
         .row

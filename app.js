@@ -4,46 +4,42 @@ var app = express();
 var bodyParser = require("body-parser");
 var session = require("express-session");
 var router_app = require("./routes_app");
-var session_middleware = require("./middlewares/sessions")
+var session_middleware = require("./middlewares/sessions");
     //IMPORTACIONES MODELOS
 var Usuario = require("./models/usuario.js").Usuario;
 var Curso = require("./models/curso.js").Curso;
 var Estudiante = require("./models/estudiante.js").Estudiante;
 var Estado = require("./models/estado.js").Estado;
+var Post = require("./models/post.js").Post;
+
 app.set("view engine", "jade"); //inicializamos el motor de vista
+
 app.use(express.static("public")); //habilitamos la carpeta public para que almacene recursos
+
 app.use(bodyParser.json()); //para peticiones con el formato application/json
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
 app.use(session({
     secret: "123456789vfcgkjbjhbhj",
     resave: false,
     saveUninitialized: false
 }));
 //
-//METODOS GET Y SET
+
+//METODOS GET Y POST
 app.get("/", function(req, res) {
     req.session.user_id = null;
     res.render("inicio");
 }); //acceso a principal
+
 app.get("/registrarse", function(req, res) {
     res.render("registrarse");
 });
-/*
-app.get("/index", function(req, res) {
-    Curso.find({}, {
-        sigla: 1,
-        nombre: 1,
-        estado: 1,
-        requisito: 1
-    }, function(err, data) {
-        console.log(req.session.user_id);
-        res.render("index", {
-            curso: data
-        });
-    });
-}); //acceso a cuenta principal*/
+
+
+//login
 app.post("/login", function(req, res) {
     Usuario.find({
         "nombre_usuario": req.body.user,
@@ -70,17 +66,21 @@ app.post("/reg", function(req, res) {
         res.render("app/estadisticas",{
             data:data
         });
-        
-
-        //app/estadisticas
-        // if (data.length > 0) {
-        //     req.session.user_id = data[0]._id;
-        //     res.redirect("/app");
-        // } else {
-        //     res.render("inicio");
-        // }
     });
 });
+
+app.post("/crear_post", function(req, res) {
+    var post = new Post({
+        titulo: req.body.titulo,
+        cuerpo: req.body.cuerpo,
+        usuario : req.session.user_id,
+    });
+    post.save(function(err){
+        console.log("guardado correctamente");
+        res.redirect("/app/blog");
+    });
+});
+
 app.post("/registrar", function(req, res) {
     var user = new Usuario({
         codigo_estudiante: req.body.codigo,
@@ -651,23 +651,7 @@ app.post("/edit", function(req, res) {
         });
     });
 });
-//post login
-/*
-app.get("/estadisticas", function(req, res) {
-    res.render("app/estadisticas");
-}); //acceso a estadisticas
-app.get("/blog", function(req, res) {
-    res.render("app/blog_home");
-}); //acceso a blog
-app.get("/blog_post", function(req, res) {
-    res.render("app/blog_post");
-}); //acceso a blog
-app.get("/informacion", function(req, res) {
-    res.render("app/informacion");
-}); //acceso a informacion
-app.get("/configuracion", function(req, res) {
-    res.render("app/configuracion");
-}); //acceso a configuracion*/
+
 app.use("/app", session_middleware);
 app.use("/app", router_app);
 app.listen(3305);
@@ -693,3 +677,55 @@ app.listen(3305);
         res.render("index");
     });
 */
+/*
+app.get("/index", function(req, res) {
+    Curso.find({}, {
+        sigla: 1,
+        nombre: 1,
+        estado: 1,
+        requisito: 1
+    }, function(err, data) {
+        console.log(req.session.user_id);
+        res.render("index", {
+            curso: data
+        });
+    });
+}); //acceso a cuenta principal*/
+
+//post login
+/*
+app.get("/estadisticas", function(req, res) {
+    res.render("app/estadisticas");
+}); //acceso a estadisticas
+app.get("/blog", function(req, res) {
+    res.render("app/blog_home");
+}); //acceso a blog
+app.get("/blog_post", function(req, res) {
+    res.render("app/blog_post");
+}); //acceso a blog
+app.get("/informacion", function(req, res) {
+    res.render("app/informacion");
+}); //acceso a informacion
+app.get("/configuracion", function(req, res) {
+    res.render("app/configuracion");
+}); //acceso a configuracion*/
+
+
+
+        //app/estadisticas
+        // if (data.length > 0) {
+        //     req.session.user_id = data[0]._id;
+        //     res.redirect("/app");
+        // } else {
+        //     res.render("inicio");
+        // }
+    // });
+
+
+        //app/estadisticas
+        // if (data.length > 0) {
+        //     req.session.user_id = data[0]._id;
+        //     res.redirect("/app");
+        // } else {
+        //     res.render("inicio");
+        // }

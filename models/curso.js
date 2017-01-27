@@ -2,16 +2,16 @@ var mongoose = require("mongoose"); //ORM
 var Schema = mongoose.Schema; //modulo esquema
 //mongoose.connect("mongodb://localhost/guia_estudiante_db"); //conexion con mongobd
 var cursoJSON = {
-    sigla: String,
-    nombre: String,
+    sigla: {type:String, required:"La sigla de curso es obligatoria"},
+    nombre: {type:String, required:"La nombre de curso es obligatoria"},
     credito: Number,
     horas_teoricas: Number,
     horas_practica: Number,
     horas_laboratorio: Number,
-    requisito: String,
-    departamento: String,
+    requisito: {type:String, required:"La requisito de curso es obligatoria"},
+    departamento: {type:String, required:"La departamento de curso es obligatoria"},
     estado: String, // aprobado / desaprobado
-    tipo_curso: String, // curso llave
+    tipo_curso: {type:String, required:"El tipo de curso es obligatoria"}, // curso llave
     serie: String,
     siglo: Number,
     descripcion: String,

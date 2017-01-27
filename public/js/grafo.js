@@ -162,7 +162,7 @@ var regNotas = [];
 regNotas = document.getElementById("ds").innerHTML;
 regNotas = regNotas.substring(1,regNotas.length-1);
 var arrayAprobados = regNotas.split("},{");
-alert(regNotas);
+//alert(regNotas);
 for (var i = 0; i < arrayAprobados.length; i++) {
     arrayAprobados[i] = arrayAprobados[i].substring(8,arrayAprobados[i].length);
 }

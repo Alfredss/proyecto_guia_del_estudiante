@@ -29,6 +29,10 @@
     margin-top: 0px;
 }
 
+table{
+
+}
+
 body {
     padding-right: 0px;
 }
@@ -232,4 +236,7 @@ thead{
 
 select{
     width:50px;
+}
+#titulo-curso{
+    font-family: 'Libre Baskerville', serif;
 }

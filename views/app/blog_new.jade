@@ -1,0 +1,67 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(content='IE=edge', http-equiv='X-UA-Compatible')
+    meta(content='width=device-width, initial-scale=1', name='viewport')
+    meta(content='', name='description')
+    meta(content='', name='author')
+    title
+      | Blog Home
+    // Bootstrap Core CSS
+    link(href='../css/bootstrap.min.css', rel='stylesheet')
+    // Custom CSS
+    link(href='../css/blog.css', rel='stylesheet')
+    // main.css
+    link(href='../css/main.css', rel='stylesheet')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body(background='../img/fondo.png')
+    .container(style='background-color:#ffffff;')
+      // Navigation
+      nav.navbar.navbar-inverse.navbar-fixed-top.container(role='navigation')
+        .container
+          // Brand and toggle get grouped for better mobile display
+          #nav_titulos.navbar-header
+            a.navbar-brand(href='/app')
+              | Home
+          // Collect the nav links, forms, and other content for toggling
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li
+                a(href='blog')
+                  | Posts
+              li
+                a(href='blog_new')
+                  | Nuevo Post
+              li
+                a(href='#')
+                  | Contactos
+          // /.navbar-collapse
+        // /.container
+      // Page Content
+      .container
+        .row
+          .col-md-4
+          .col-md-4
+            h3.text-center
+              | Crear nuevo post
+            form(action="/crear_post", method="post")
+              div.form-group
+                input.form-control(type="text", name="titulo", placeholder="Titulo de Post")
+              div.form-group
+                input.form-control(type="text", name="cuerpo", placeholder="Cuerpo del post")
+              div.form-group
+                input.btn.btn-success.center-block(type="submit", value="Enviar")
+          .col-md-4
+        
+            // /.col-lg-12
+          // /.row
+      // /.container
+      // jQuery
+      script(src='js/jquery.js')
+      // Bootstrap Core JavaScript
+      script(src='js/bootstrap.min.js')

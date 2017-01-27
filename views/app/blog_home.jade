@@ -14,6 +14,7 @@ html(lang='en')
     link(href='../css/blog.css', rel='stylesheet')
     // main.css
     link(href='../css/main.css', rel='stylesheet')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
     // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
     // WARNING: Respond.js doesn't work if you view the page via file://
     //if lt IE 9
@@ -32,11 +33,11 @@ html(lang='en')
           #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav
               li
-                a(href='#')
-                  | Acerca de
+                a(href='blog')
+                  | Posts
               li
-                a(href='#')
-                  | Servicios
+                a(href='blog_new')
+                  | Nuevo Post
               li
                 a(href='#')
                   | Contactos
@@ -44,73 +45,45 @@ html(lang='en')
         // /.container
       // Page Content
       .container
+        p#data(hidden="true") #{data}
+        script.
+          var a = document.getElementById("data").innerHTML;
+          var b = a.substring(1,a.length);
+          var c = b.substring(0,b.length-1);
+          var array = [];
+          var matriz = [];
+          var matrizFija = [];
+          array = c.split("},{");
+          var numero_post = array.length;
+          for(var i=0;i<array.length;i++){
+            matriz[i] = array[i].split(",");
+            //- alert(matriz[i][2]);
+          }
+          for(var i=0;i<array.length;i++){
+            matriz[i][0] = matriz[i][0].substring(6,matriz[i][0].length);//id
+            matriz[i][1] = matriz[i][1].substring(11,matriz[i][1].length);//titulo
+            matriz[i][2] = matriz[i][2].substring(11,matriz[i][2].length);//cuerpo
+            matriz[i][3] = matriz[i][3].substring(12,matriz[i][3].length);//usuario
+            //alert(matriz[i][3]);
+          }
+          
+          //- alert(c);
+          $(document).ready(function(){
+            for(var s=0;s<numero_post;s++){
+              $('#cuerpo_post').append('<h2><a href="blog_post" style="font-size:26px">'+matriz[s][1]+'</a><p class="lead">por <a href="index.php">Estudiante Anonimo</a></p><p style="font-size:10px"><span class="glyphicon glyphicon-time"></span>Posteado en August 28, 2013 at 10:00 PM</p><hr/><p style="font-size:18px">'+matriz[s][2]+'</p><a class="btn btn-primary" href="blog_post">Leer más<span class="glyphicon glyphicon-chevron-right"></span></a> <hr/></h2>');
+            }
+            
+          });
         .row
           // Blog Entries Column
           .col-md-8
             h1.page-header
               | Blog Del Estudiante
               small
-                | Informate e Informanos
+                |  Informate e Informanos
             // First Blog Post
-            h2
-              a(href='#')
-                | Titulo de Post
-            p.lead
-              | por
-              a(href='index.php')
-                | Estudiante Anonimo
-            p
-              span.glyphicon.glyphicon-time
-              |               Posteado en August 28, 2013 at 10:00 PM
-            hr
-            img.img-responsive(alt='', src='http://placehold.it/900x300')
-            hr
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.
-            a.btn.btn-primary(href='blog_post')
-              | Leer más
-              span.glyphicon.glyphicon-chevron-right
-            hr
-            // Second Blog Post
-            h2
-              a(href='#')
-                | Blog Post Title
-            p.lead
-              | by
-              a(href='index.php')
-                | Start Bootstrap
-            p
-              span.glyphicon.glyphicon-time
-              |                       Posted on August 28, 2013 at 10:45 PM
-            hr
-            img.img-responsive(alt='', src='http://placehold.it/900x300')
-            hr
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quasi, fugiat, asperiores harum voluptatum tenetur a possimus nesciunt quod accusamus saepe tempora ipsam distinctio minima dolorum perferendis labore impedit voluptates!
-            a.btn.btn-primary(href='#')
-              | Read More
-              span.glyphicon.glyphicon-chevron-right
-            hr
-            // Third Blog Post
-            h2
-              a(href='#')
-                | Blog Post Title
-            p.lead
-              | by
-              a(href='index.php')
-                | Start Bootstrap
-            p
-              span.glyphicon.glyphicon-time
-              |                               Posted on August 28, 2013 at 10:45 PM
-            hr
-            img.img-responsive(alt='', src='http://placehold.it/900x300')
-            hr
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptates, voluptas dolore ipsam cumque quam veniam accusantium laudantium adipisci architecto itaque dicta aperiam maiores provident id incidunt autem. Magni, ratione.
-            a.btn.btn-primary(href='#')
-              | Read More
-              span.glyphicon.glyphicon-chevron-right
-            hr
+            div#cuerpo_post            
+           
             // Pager
             ul.pager
               li.previous
